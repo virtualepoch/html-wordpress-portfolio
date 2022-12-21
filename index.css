@@ -75,11 +75,36 @@ header {
 .logo-container {
   width: 50px;
   height: 50px;
-  background: radial-gradient(white, aqua);
+  background: radial-gradient(at 70% 30%, white, aqua);
+  border-left: 8px solid var(--classic-double-blue-4);
   border-radius: 50%;
   box-shadow: 0 0 20px 5px white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
-
+.logo,
+.logo::before,
+.logo::after {
+  background: var(--classic-double-blue-4);
+  width: 55px;
+  height: 5px;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateX(-3px) rotate(90deg);
+}
+.logo::before,
+.logo::after {
+  content: "";
+  width: 25px;
+  height: 3px;
+  transform-origin: 100% 100%;
+  transform: rotate(45deg);
+}
+.logo::after {
+  transform: rotate(135deg);
+}
 .site-title {
   color: var(--blue-chrome-4);
   font: 600 25px Neonsign;

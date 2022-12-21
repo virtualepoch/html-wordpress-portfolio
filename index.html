@@ -20,7 +20,9 @@
     <header>
         <div class="top-header">
             <div class="side">
-                <div class="logo-container"></div>
+                <div class="logo-container">
+                    <div class="logo"></div>
+                </div>
                 <h1 class="site-title">Craig Kaufman</h1>
                 <h1 class="site-title sub">Web Developer</h1>
             </div>
@@ -43,9 +45,11 @@
         <div class="heading">
             <div class="hero-section">
                 <h1 class="hero-heading">Welcome to My Portfolio</h1>
-                <h2 class="hero-content">My name is <span class="name" id="name"></span>. I'm a <span id="title"></span> with a few
+                <h2 class="hero-content">My name is <span class="name" id="name"></span>. I'm a <span id="title"></span>
+                    with a few
                     <span class="word-tricks">t<span class="letter-r">r</span>icks</span> up
-                    my sleeve. Here you can find links to <span class="projects">projects</span> I've worked on as well as ways to <span class="contact">contact</span> me for
+                    my sleeve. Here you can find links to <span class="projects">projects</span> I've worked on as well
+                    as ways to <span class="contact">contact</span> me for
                     services. Thanks for visiting!
                 </h2>
             </div>
@@ -127,7 +131,7 @@
     </footer>
 
     <script>
-        document.onload(insertNameTitle());
+        // document.onload(insertNameTitle());
         // document.querySelector("body").addEventListener("onload", insertNameTitle());
 
         function insertNameTitle() {
@@ -137,7 +141,6 @@
             document.getElementById("title").innerHTML = title;
         }
 
-        document.getElementById("myText").innerHTML = number;
         const btnNavMenu = document.getElementById("btn-nav-menu");
         const navMenu = document.getElementById("nav-menu");
 
@@ -145,6 +148,7 @@
             navMenu.classList.toggle("open");
             btnNavMenu.classList.toggle("open");
         }
+        insertNameTitle();
 
     </script>
 </body>
