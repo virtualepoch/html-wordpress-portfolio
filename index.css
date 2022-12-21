@@ -172,8 +172,6 @@ header {
 }
 
 .heading {
-  background: var(--blue-chrome-3);
-  box-shadow: 0 2px 10px 2px rgb(0, 0, 0, 0.5);
   margin: 100px auto;
   display: flex;
   align-items: center;
@@ -210,6 +208,36 @@ header {
 .content-content {
   font: 600 20px Raleway;
   padding: 10px 0;
+  /* position: relative; */
+}
+.hero-content .name {
+  color: red;
+  filter: drop-shadow(-1px 2px 1px var(--blue-chrome-3));
+}
+.hero-content #title {
+  color: red;
+  filter: drop-shadow(-1px 2px 0 var(--blue-chrome-3));
+  animation: scale 1s ease-in-out infinite;
+}
+.word-tricks {
+  color: var(--blue-chrome-4);
+}
+.letter-r {
+  color: red;
+  filter: drop-shadow(-1px 1px 1px rgb(0, 0, 0, 0.5));
+}
+.projects {
+  color: var(--blue-chrome-4);
+  filter: drop-shadow(1px 2px 1px var(--blue-chrome-3));
+}
+.contact {
+  color: var(--blue-chrome-4);
+  filter: drop-shadow(1px 2px 0 var(--blue-chrome-3));
+}
+@keyframes scale {
+  50% {
+    transform: rotate(360deg);
+  }
 }
 .content-2 {
   background: var(--blue-chrome-4);
@@ -217,7 +245,11 @@ header {
 }
 .content-3 {
   background: var(--blue-chrome-5);
-  color: var(--blue-chrome-1);
+  color: var(--blue-chrome-4);
+}
+.content-3 .content-heading,
+.content-3 .content-content {
+  filter: drop-shadow(-2px 2px 0 var(--blue-chrome-3));
 }
 
 .footer-background {

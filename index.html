@@ -43,11 +43,11 @@
         <div class="heading">
             <div class="hero-section">
                 <h1 class="hero-heading">Welcome to My Portfolio</h1>
-                <h2 class="hero-content">My name is Craig Kaufman. I'm a front-end developer with a few
-                    tricks
-                    up
-                    my sleeve. Here you can find links to projects I'm working on as well as ways to contact me for
-                    services. Thanks for visiting!</h2>
+                <h2 class="hero-content">My name is <span class="name" id="name"></span>. I'm a <span id="title"></span> with a few
+                    <span class="word-tricks">t<span class="letter-r">r</span>icks</span> up
+                    my sleeve. Here you can find links to <span class="projects">projects</span> I've worked on as well as ways to <span class="contact">contact</span> me for
+                    services. Thanks for visiting!
+                </h2>
             </div>
             <div class="image-flip-section">
                 <div class="image-flip-row">
@@ -122,13 +122,26 @@
 
     <div class="footer-background"></div>
 
-    <footer>FOOTER Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure, explicabo unde? Nobis, odit ipsa aliquid natus magni dolores amet, dolorum autem porro, saepe ratione eaque eum et minima exercitationem soluta?</footer>
+    <footer>FOOTER Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure, explicabo unde? Nobis, odit ipsa
+        aliquid natus magni dolores amet, dolorum autem porro, saepe ratione eaque eum et minima exercitationem soluta?
+    </footer>
 
     <script>
+        document.onload(insertNameTitle());
+        // document.querySelector("body").addEventListener("onload", insertNameTitle());
+
+        function insertNameTitle() {
+            var name = "Craig Kaufman";
+            var title = "Front-End Web Developer";
+            document.getElementById("name").innerHTML = name;
+            document.getElementById("title").innerHTML = title;
+        }
+
+        document.getElementById("myText").innerHTML = number;
         const btnNavMenu = document.getElementById("btn-nav-menu");
         const navMenu = document.getElementById("nav-menu");
 
-        function openCloseNavMenu(){
+        function openCloseNavMenu() {
             navMenu.classList.toggle("open");
             btnNavMenu.classList.toggle("open");
         }
