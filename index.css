@@ -1,0 +1,164 @@
+@font-face {
+  font-family: Aseline;
+  src: url(./fonts/Aseline.ttf);
+}
+@font-face {
+  font-family: Everleigh;
+  src: url(./fonts/Everleigh.otf);
+}
+@font-face {
+  font-family: Neonsign;
+  src: url(./fonts/NeonsignRegular.ttf);
+}
+@font-face {
+  font-family: Razor Blade;
+  src: url(./fonts/RazorBlade.ttf);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+:root {
+  --classic-double-blue-1: #12232e;
+  --classic-double-blue-2: #203647;
+  --classic-double-blue-3: #007cc7;
+  --classic-double-blue-4: #4da8da;
+  --classic-double-blue-5: #eefbfb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--classic-double-blue-5);
+}
+
+header {
+  background: var(--classic-double-blue-5);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 5px 2px rgb(0, 0, 0, 0.3);
+}
+
+.top-header {
+  max-width: 1200px;
+  min-height: 50px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-header .side {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.site-title {
+  color: var(--classic-double-blue-3);
+  font: 600 40px Neonsign;
+  /* WEIGHT FOR ASELINE FONT ONLY CHANGES BETWEEN 5 & 6 */
+  height: fit-content;
+  padding: 5px 10px;
+}
+.site-title.sub {
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  border-bottom-left-radius: 5px;
+  color: var(--classic-double-blue-2);
+  font: 500 30px Raleway;
+}
+
+/* NAVIGATION MENU BUTTON STYLING ///////////////////////// */
+.btn-nav-menu {
+  box-shadow: inset 0 0 5px 1px rgb(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  padding: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+.btn-nav-menu .bars,
+.btn-nav-menu .bars::before,
+.btn-nav-menu .bars::after {
+  background: var(--classic-double-blue-3);
+  width: calc(100% - 10px);
+  height: 3px;
+  border-radius: 3px;
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+}
+.btn-nav-menu .bars::before,
+.btn-nav-menu .bars::after {
+  content: "";
+  width: 100%;
+  transform: translateY(-8px);
+}
+.btn-nav-menu .bars::after {
+  transform: translateY(8px);
+}
+
+.btn-nav-menu:hover .bars {
+  background: transparent;
+}
+.btn-nav-menu:hover .bars::before {
+  transform: rotate(45deg);
+}
+.btn-nav-menu:hover .bars::after {
+  transform: rotate(-45deg);
+}
+
+/* MAIN PAGE CONTENT /////////////////// */
+.main-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+}
+
+.heading {
+  background: var(--classic-double-blue-3);
+  box-shadow: 0 2px 5px 2px rgb(0, 0, 0, 0.3);
+  margin: 50px auto;
+  display: flex;
+}
+
+.hero-section {
+  color: var(--classic-double-blue-5);
+  font: 500 15px Raleway;
+  padding: 20px;
+}
+
+.hero-heading {
+  font: 600 30px Neonsign;
+  padding: 20px 0;
+}
+
+.content {
+  border: solid green;
+  width: 100%;
+  height: 600px;
+  padding: 20px;
+}
+.content-heading{
+  font: 600 25px Neonsign;
+  padding: 10px 0;
+}
+.content-content{
+  font: 600 20px Raleway;
+  padding: 10px 0;
+}
+
+footer {
+  background: var(--classic-double-blue-5);
+  box-shadow: 0 -2px 5px 2px rgb(0, 0, 0, 0.3);
+  width: 100%;
+  height: 2000px;
+}

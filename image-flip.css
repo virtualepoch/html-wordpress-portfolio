@@ -8,33 +8,16 @@
   --box-4-background-image: url(./assets/vrheadset.jpg) 50%/100%;
   --animation-duration: 8s;
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  border: solid;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.hero-section{
-  border: solid red;
-  display: flex;
-}
-
-.hero-text{
-  border: solid blue;
+:root {
+  --classic-double-blue-1: #12232e;
+  --classic-double-blue-2: #203647;
+  --classic-double-blue-3: #007cc7;
+  --classic-double-blue-4: #4da8da;
+  --classic-double-blue-5: #eefbfb;
 }
 
 .image-flip-section {
-  box-shadow: 0 2px 5px 2px rgb(0, 0, 0, 0.3);
+  background: var(--classic-double-blue-2);
   width: fit-content;
   height: fit-content;
   padding: 10px;
@@ -42,6 +25,7 @@ body {
   flex-direction: column;
   gap: var(--rotating-square-gap);
 }
+
 .image-flip-row {
   width: fit-content;
   display: flex;
@@ -68,7 +52,7 @@ body {
 
 /* PICTURE FLIP SIDE POSITIONING ///////////////////////////////// */
 .image-flip .side {
-  background: aqua;
+  background: white;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -91,24 +75,25 @@ body {
 .image-flip .left,
 .image-flip .right {
   width: 10px;
-  left: -10px;
+  left: -5px;
   transform: rotateY(90deg);
+  display: none;
 }
 
 .image-flip .right {
-  left: 100%;
+  left: calc(100% - 5px);
 }
 
 .image-flip .top,
 .image-flip .bottom {
   width: 100%;
   height: 10px;
-  top: -10px;
+  top: -5px;
   transform: rotateX(90deg);
 }
 
 .image-flip .bottom {
-  top: 100%;
+  top: calc(100% - 5px);
 }
 
 /* BACKGROUND IMAGES & ANIMATION TIMINGS ///////////////////////////////// */
