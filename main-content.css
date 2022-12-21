@@ -1,0 +1,118 @@
+/* MAIN PAGE CONTENT /////////////////// */
+.main-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+  }
+  
+  .main-content .link {
+    text-decoration: none;
+  }
+  
+  .heading {
+    margin: 100px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .hero-section {
+    width: 100%;
+    min-width: 300px;
+    color: white;
+    font: 500 15px Raleway;
+    padding: 20px;
+    flex: 1;
+  }
+  
+  .hero-heading {
+    padding: 20px 0;
+    font: 600 30px Neonsign;
+    color: aqua;
+    filter: drop-shadow(-2px 2px 1px var(--blue-chrome-3));
+  }
+  
+  .content {
+    background: var(--blue-chrome-2);
+    color: var(--blue-chrome-5);
+    width: 100%;
+    height: fit-content;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  .content-heading {
+    font: 600 25px Neonsign;
+    padding: 10px 0;
+  }
+  .content-content {
+    font: 600 20px Raleway;
+    padding: 10px 0;
+    /* position: relative; */
+  }
+  .hero-content .name {
+    color: aqua;
+    filter: var(--text-drop-shadow);
+  }
+  .hero-content #title {
+    color: red;
+    filter: var(--text-drop-shadow);
+    animation: scale 1s ease-in-out infinite;
+  }
+  .word-tricks {
+    color: white;
+  }
+  .letter-r {
+    color: var(--blue-chrome-4);
+    filter: var(--text-drop-shadow);
+  }
+  .projects,
+  .contact {
+    color: var(--blue-chrome-4);
+    filter: var(--text-drop-shadow);
+  }
+  .projects:hover,
+  .contact:hover {
+    color: aqua;
+  }
+  
+  @keyframes scale {
+    50% {
+      transform: rotate(360deg);
+    }
+  }
+  .content-2 {
+    background: var(--blue-chrome-4);
+    color: var(--blue-chrome-1);
+  }
+  .content-3 {
+    background: var(--blue-chrome-5);
+    color: var(--blue-chrome-4);
+  }
+  .content-3 .content-heading,
+  .content-3 .content-content {
+    filter: drop-shadow(-2px 2px 0 var(--blue-chrome-3));
+  }
+  
+  .footer-background {
+    width: 100vw;
+    aspect-ratio: 1920/1080;
+    background: url(./assets/body-bg.jpg) 0 0 / 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: -2;
+  }
+  footer {
+    background: rgb(11, 22, 52, 0.7);
+    backdrop-filter: blur(3px);  
+    box-shadow: 0 -2px 5px 2px rgb(0, 0, 0, 0.3);
+    color: white;
+    font: 600 15px Raleway;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  

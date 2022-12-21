@@ -1,5 +1,5 @@
 :root {
-  --rotating-square-size: 100px;
+  --rotating-square-size: 150px;
   --rotating-square-gap: 10px;
   --background-image-opacity: 0.7;
   --box-1-background-image: url(./assets/vrheadset-100.jpg) 50%/100%;
@@ -25,7 +25,7 @@
   color: white;
   width: fit-content;
   height: fit-content;
-  /* padding: 10px; */
+  padding: 15px;
   display: flex;
   flex-direction: column;
   /* gap: var(--rotating-square-gap); */
