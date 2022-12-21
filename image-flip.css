@@ -1,11 +1,11 @@
 :root {
   --rotating-square-size: 100px;
   --rotating-square-gap: 10px;
-  --background-image-opacity: 1;
-  --box-1-background-image: url(./assets/vrheadset.jpg) 50%/100%;
-  --box-2-background-image: url(./assets/vrheadset.jpg) 50%/100%;
-  --box-3-background-image: url(./assets/vrheadset.jpg) 50%/100%;
-  --box-4-background-image: url(./assets/vrheadset.jpg) 50%/100%;
+  --background-image-opacity: 0.7;
+  --box-1-background-image: url(./assets/vrheadset-100.jpg) 50%/100%;
+  --box-2-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--classic-double-blue-4);
+  --box-3-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--classic-double-blue-4);
+  --box-4-background-image: url(./assets/vrheadset-200.jpg) 50%/100%;
   --animation-duration: 8s;
 }
 :root {
@@ -18,6 +18,7 @@
 
 .image-flip-section {
   background: var(--classic-double-blue-2);
+  color: white;
   width: fit-content;
   height: fit-content;
   padding: 10px;
