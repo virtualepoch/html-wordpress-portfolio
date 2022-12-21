@@ -133,14 +133,35 @@ header {
   transform: translateY(8px);
 }
 
-.btn-nav-menu:hover .bars {
+.btn-nav-menu.open .bars {
   background: transparent;
 }
-.btn-nav-menu:hover .bars::before {
+.btn-nav-menu.open .bars::before {
   transform: rotate(45deg);
 }
-.btn-nav-menu:hover .bars::after {
+.btn-nav-menu.open .bars::after {
   transform: rotate(-45deg);
+}
+
+.nav-menu {
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-menu .link {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 500ms ease-in-out;
+  color: white;
+}
+.nav-menu.open .link {
+  height: 70px;
 }
 
 /* MAIN PAGE CONTENT /////////////////// */

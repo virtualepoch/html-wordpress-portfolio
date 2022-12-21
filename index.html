@@ -25,11 +25,18 @@
                 <h1 class="site-title sub">Web Developer</h1>
             </div>
             <div class="side">
-                <div class="btn-nav-menu">
+                <div class="btn-nav-menu" id="btn-nav-menu" onclick="openCloseNavMenu()">
                     <div class="bars"></div>
                 </div>
             </div>
         </div>
+        <div class="nav-menu" id="nav-menu">
+            <a href="/" class="link">Home</a>
+            <a href="/about.html" class="link">About</a>
+            <a href="/projects.html" class="link">Projects</a>
+            <a href="/#contact" class="link">Contact</a>
+        </div>
+        <div class="nav-menu-underlay"></div>
     </header>
 
     <section class="main-content">
@@ -117,6 +124,16 @@
 
     <footer>FOOTER Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure, explicabo unde? Nobis, odit ipsa aliquid natus magni dolores amet, dolorum autem porro, saepe ratione eaque eum et minima exercitationem soluta?</footer>
 
+    <script>
+        const btnNavMenu = document.getElementById("btn-nav-menu");
+        const navMenu = document.getElementById("nav-menu");
+
+        function openCloseNavMenu(){
+            navMenu.classList.toggle("open");
+            btnNavMenu.classList.toggle("open");
+        }
+
+    </script>
 </body>
 
 </html>
