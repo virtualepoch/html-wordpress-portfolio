@@ -7,30 +7,34 @@
   --box-3-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--classic-double-blue-4);
   --box-4-background-image: url(./assets/vrheadset-200.jpg) 50%/100%;
   --animation-duration: 8s;
-}
-:root {
+  /* COLORS */
   --classic-double-blue-1: #12232e;
   --classic-double-blue-2: #203647;
   --classic-double-blue-3: #007cc7;
   --classic-double-blue-4: #4da8da;
   --classic-double-blue-5: #eefbfb;
+  --blue-chrome-1: #0b1634;
+  --blue-chrome-1-opaque: rgb(11, 22, 52, 0.7);
+  --blue-chrome-2: #0e2650;
+  --blue-chrome-3: #266c9d;
+  --blue-chrome-4: #74d2d4;
+  --blue-chrome-5: #e2dcd4;
 }
 
 .image-flip-section {
-  background: var(--classic-double-blue-2);
   color: white;
   width: fit-content;
   height: fit-content;
-  padding: 10px;
+  /* padding: 10px; */
   display: flex;
   flex-direction: column;
-  gap: var(--rotating-square-gap);
+  /* gap: var(--rotating-square-gap); */
 }
 
 .image-flip-row {
   width: fit-content;
   display: flex;
-  gap: var(--rotating-square-gap);
+  /* gap: var(--rotating-square-gap); */
 }
 
 .image-flip-container {
