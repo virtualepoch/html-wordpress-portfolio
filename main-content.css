@@ -94,25 +94,3 @@
     filter: drop-shadow(-2px 2px 0 var(--blue-chrome-3));
   }
   
-  .footer-background {
-    width: 100vw;
-    aspect-ratio: 1920/1080;
-    background: url(./assets/body-bg.jpg) 0 0 / 100%;
-    position: fixed;
-    bottom: 0;
-    z-index: -2;
-  }
-  footer {
-    background: rgb(11, 22, 52, 0.7);
-    backdrop-filter: blur(3px);  
-    box-shadow: 0 -2px 5px 2px rgb(0, 0, 0, 0.3);
-    color: white;
-    font: 600 15px Raleway;
-    width: 100%;
-    aspect-ratio: 1920/1080;
-    padding: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  

@@ -20,6 +20,7 @@
         <div class="to-top-btn-bars"></div>
     </div>
 
+    <div class="footer-background"></div>
     <div class="landing-background"></div>
 
     <header>
@@ -38,10 +39,18 @@
             </div>
         </div>
         <div class="nav-menu" id="nav-menu">
-            <a href="/" class="link">Home</a>
-            <a href="/about.html" class="link">About</a>
-            <a href="/projects.html" class="link">Projects</a>
-            <a href="/#contact" class="link">Contact</a>
+            <a href="/" class="link">
+                <p class="link-text">Home</p>
+            </a>
+            <a href="/about.html" class="link">
+                <p class="link-text">About</p>
+            </a>
+            <a href="/projects.html" class="link">
+                <p class="link-text">Projects</p>
+            </a>
+            <a href="/#contact" class="link" onclick="openCloseNavMenu()">
+                <p class="link-text">Contact</p>
+            </a>
         </div>
         <div class="nav-menu-underlay"></div>
     </header>
@@ -93,9 +102,9 @@
                             <div class="side bottom"></div>
                         </div>
                     </a>
-                    <a href="/" class="image-flip-container four">
+                    <a href="#contact" class="image-flip-container four">
                         <div class="image-flip">
-                            <div class="side front">?????</div>
+                            <div class="side front">Contact</div>
                             <div class="side back"></div>
                             <div class="side left"></div>
                             <div class="side right"></div>
@@ -130,8 +139,6 @@
 
     </section>
 
-    <div class="footer-background"></div>
-
     <footer id="contact">FOOTER Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure, explicabo unde? Nobis,
         odit ipsa
         aliquid natus magni dolores amet, dolorum autem porro, saepe ratione eaque eum et minima exercitationem soluta?
@@ -162,6 +169,7 @@
             document.getElementById("name").innerHTML = name;
             document.getElementById("title").innerHTML = title;
         }
+        insertNameTitle();
 
         const btnNavMenu = document.getElementById("btn-nav-menu");
         const navMenu = document.getElementById("nav-menu");
@@ -170,7 +178,6 @@
             navMenu.classList.toggle("open");
             btnNavMenu.classList.toggle("open");
         }
-        insertNameTitle();
 
     </script>
 </body>
