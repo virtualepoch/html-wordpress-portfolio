@@ -1,12 +1,18 @@
 :root {
   --rotating-square-size: 150px;
   --rotating-square-gap: 10px;
-  --background-image-opacity: 0.7;
-  --box-1-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--blue-chrome-2);
-  --box-2-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--blue-chrome-3);
-  --box-3-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--blue-chrome-4);
-  --box-4-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--blue-chrome-2);
-  --animation-duration: 8s;
+  --backdrop-filter: blur(3px);
+
+  --animation-duration: 40s;
+  --box-1-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--blue-chrome-2-opaque);
+  --box-1-text: var(--blue-chrome-6);
+  --box-2-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--blue-chrome-3-opaque);
+  --box-2-text: var(--blue-chrome-4);
+  --box-3-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--blue-chrome-4-opaque);
+  --box-3-text: var(--blue-chrome-2);
+  --box-4-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--blue-chrome-2-opaque);
+  --box-4-text: var(--blue-chrome-6);
+
   /* COLORS */
   --classic-double-blue-1: #12232e;
   --classic-double-blue-2: #203647;
@@ -14,11 +20,17 @@
   --classic-double-blue-4: #4da8da;
   --classic-double-blue-5: #eefbfb;
   --blue-chrome-1: #0b1634;
-  --blue-chrome-1-opaque: rgb(11, 22, 52, 0.7);
+  --blue-chrome-1-opaque: rgb(11, 22, 52, 0.5);
   --blue-chrome-2: #0e2650;
+  --blue-chrome-2-opaque: rgb(14, 38, 80, 0.3);
   --blue-chrome-3: #266c9d;
+  --blue-chrome-3-opaque: rgb(38, 108, 157, 0.3);
   --blue-chrome-4: #74d2d4;
+  --blue-chrome-4-opaque: rgb(116, 210, 212, 0.3);
   --blue-chrome-5: #e2dcd4;
+  --blue-chrome-5-opaque: rgb(226, 220, 212, 0.3);
+  --blue-chrome-6: #fff;
+  --blue-chrome-6-opaque: rgb(255, 255, 255, 0.3);
 }
 
 .image-flip-section {
@@ -59,7 +71,6 @@
 
 /* PICTURE FLIP SIDE POSITIONING ///////////////////////////////// */
 .image-flip .side {
-  background: white;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -67,6 +78,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--blue-chrome-5);
+  backdrop-filter: var(--backdrop-filter);
 }
 
 .image-flip .front {
@@ -74,7 +87,7 @@
   text-decoration: underline;
   color: white;
   transform: translateZ(5px);
-  opacity: var(--background-image-opacity);
+  border-radius: 5px;
 }
 
 .image-flip-row:nth-child(2) .front {
@@ -83,6 +96,7 @@
 
 .image-flip .back {
   transform: translateZ(-5px) rotateX(180deg);
+  border-radius: 2px;
   opacity: var(--background-image-opacity);
 }
 
@@ -100,10 +114,11 @@
 
 .image-flip .top,
 .image-flip .bottom {
-  width: 100%;
+  width: 95%;
   height: 10px;
   top: -5px;
-  transform: rotateX(90deg);
+  transform: rotateX(90deg) translateX(4px);
+  background: var(--blue-chrome-6-opaque);
 }
 
 .image-flip .bottom {
@@ -118,6 +133,8 @@
 .image-flip-row:nth-child(1) .image-flip-container:nth-child(1) .front,
 .image-flip-row:nth-child(1) .image-flip-container:nth-child(1) .back {
   background: var(--box-1-background-image);
+  backdrop-filter: var(--backdrop-filter);
+  color: var(--box-1-text);
 }
 
 /* Z-INDEX CHANGE ANIMATION */
@@ -158,6 +175,7 @@
 .image-flip-row:nth-child(1) .image-flip-container:nth-child(2) .front,
 .image-flip-row:nth-child(1) .image-flip-container:nth-child(2) .back {
   background: var(--box-2-background-image);
+  color: var(--box-2-text);
 }
 
 /* FLIP ANIMATION */
@@ -182,6 +200,7 @@
 .image-flip-row:nth-child(2) .image-flip-container:nth-child(1) .front,
 .image-flip-row:nth-child(2) .image-flip-container:nth-child(1) .back {
   background: var(--box-3-background-image);
+  color: var(--box-3-text);
 }
 
 /* Z-INDEX CHANGE ANIMATION */
@@ -219,6 +238,7 @@
 .image-flip-row:nth-child(2) .image-flip-container:nth-child(2) .front,
 .image-flip-row:nth-child(2) .image-flip-container:nth-child(2) .back {
   background: var(--box-4-background-image);
+  color: var(--box-4-text);
 }
 
 /* FLIP ANIMATION */

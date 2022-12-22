@@ -52,6 +52,7 @@ html {
 
 body {
   background: var(--blue-chrome-1);
+  background: url(assets/body-bg.jpg);
 }
 section,
 footer {
@@ -62,8 +63,9 @@ footer {
 .landing-background {
   width: 100vw;
   aspect-ratio: 1920/1080;
-  background: url(./assets/body-bg.jpg) 0 0 / 100%;
-  background: url(https://wallpapercave.com/wp/0f2jXy6.jpg) 0 0 / 100%;
+  background: url(assets/ck-logo02.png) 0 0 / 100%;
+  background: url(assets/body-bg.jpg) 0 0 / 100%;
+  /* background: url(https://wallpapercave.com/wp/0f2jXy6.jpg) 0 0 / 100%; */
   position: fixed;
   z-index: 1;
 }
