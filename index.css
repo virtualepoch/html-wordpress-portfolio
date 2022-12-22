@@ -28,6 +28,15 @@
   --blue-chrome-3: #266c9d;
   --blue-chrome-4: #74d2d4;
   --blue-chrome-5: #e2dcd4;
+  --pink-theme-1: #ff597b;
+  --pink-theme-2: #ff8e9e;
+  --pink-theme-3: #f9b5d0;
+  --pink-theme-2-1: #ff597b;
+  --pink-theme-2-2: #ff8e9e;
+  --pink-theme-2-3: #f9b5d0;
+  --pink-theme-2-4: #f9b5d0;
+  --dark-hot-pink: #d90166;
+  --pink-test: #ff0077;
   --text-drop-shadow: drop-shadow(-2px 1px 1px var(--blue-chrome-3));
 }
 /* GENERAL STYLING */
@@ -159,8 +168,11 @@ header {
 .logo-container {
   width: 50px;
   height: 50px;
-  background: radial-gradient(at 70% 30%, white, aqua);
-  border-left: 8px solid var(--classic-double-blue-4);
+  margin: 15px;
+  background: radial-gradient(circle at 55% 45%, white 20%, aqua);
+  /* !!! FOR SOME REASON I COULDN'T GET 'BORDER-BOX' TO WORK BELOW... HAD TO USE PSEUDO ELEMENT BELOW TO ACHIEVE PROPER BORDER AND ELEMENT POSITION FOR THE LOGO */
+  /* border-left: 7px solid var(--classic-double-blue-3); */
+  /* box-sizing: border-box; */
   border-radius: 50%;
   box-shadow: 0 0 20px 5px white;
   display: flex;
@@ -169,15 +181,33 @@ header {
   position: relative;
 }
 
+.logo-container::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-left: solid 7px var(--blue-chrome-3);
+  border-radius: 50%;
+}
+
+@media (max-width: 700px) {
+  .logo-container {
+    margin: 35px;
+    margin-bottom: 135px;
+    margin-right: 135px;
+  }
+}
+
 .logo,
 .logo::before,
 .logo::after {
-  background: var(--classic-double-blue-4);
-  width: 55px;
-  height: 5px;
+  background: var(--blue-chrome-2);
+  width: 4px;
+  height: 50px;
   border-radius: 50%;
   position: absolute;
-  transform: translateX(-3px) rotate(90deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo::before,
@@ -185,12 +215,13 @@ header {
   content: "";
   width: 25px;
   height: 3px;
-  transform-origin: 100% 100%;
-  transform: rotate(45deg);
+}
+.logo::before {
+  transform: translateX(9px) translateY(8px) rotate(45deg);
 }
 
 .logo::after {
-  transform: rotate(135deg);
+  transform: translateX(9px) translateY(-8px) rotate(135deg);
 }
 
 .site-title {

@@ -55,7 +55,7 @@
     filter: var(--text-drop-shadow);
   }
   .hero-content #title {
-    color: red;
+    color: var( --pink-test);
     filter: var(--text-drop-shadow);
     animation: scale 1s ease-in-out infinite;
   }
