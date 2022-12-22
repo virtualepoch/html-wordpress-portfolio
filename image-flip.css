@@ -3,9 +3,9 @@
   --rotating-square-gap: 10px;
   --background-image-opacity: 0.7;
   --box-1-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--blue-chrome-2);
-  --box-2-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--classic-double-blue-4);
-  --box-3-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--classic-double-blue-4);
-  --box-4-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--blue-chrome-4);
+  --box-2-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--blue-chrome-3);
+  --box-3-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--blue-chrome-4);
+  --box-4-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--blue-chrome-2);
   --animation-duration: 8s;
   /* COLORS */
   --classic-double-blue-1: #12232e;

@@ -92,10 +92,9 @@ footer {
 
 /* SCROLL TO TOP BUTTON */
 #to-top-btn {
-  width: 100px;
+  width: 80px;
   height: 50px;
-  border: 1px solid white;
-  border-radius: 5px;
+  border-top: 3px solid white;
   position: fixed;
   bottom: -60px;
   left: 0;
@@ -107,19 +106,21 @@ footer {
   justify-content: center;
   transition: bottom 300ms ease-in-out;
 }
-
-#to-top-btn:hover {
-  background: rgb(116, 210, 212, 0.5);
+@media (min-width: 800px) {
+  #to-top-btn:hover {
+    background: rgb(116, 210, 212, 0.5);
+  }
 }
 
 #to-top-btn.open {
-  bottom: 10px;
+  bottom: 0;
 }
 
 .to-top-btn-bars {
-  width: 28px;
-  height: 3px;
+  width: 32px;
+  height: 4px;
   position: relative;
+  top: -5px;
 }
 
 .to-top-btn-bars::before,
@@ -128,18 +129,17 @@ footer {
   width: 100%;
   height: 100%;
   background-color: white;
-  border-radius: 3px;
   position: absolute;
 }
 
 .to-top-btn-bars::before {
-  left: -9px;
-  transform: rotate(-45deg);
+  left: -12px;
+  transform: rotate(-35deg);
 }
 
 .to-top-btn-bars::after {
-  left: 9px;
-  transform: rotate(45deg);
+  left: 12px;
+  transform: rotate(35deg);
 }
 
 /* MAIN PAGE HEADER */
@@ -262,7 +262,7 @@ header {
 .btn-nav-menu .bars::before,
 .btn-nav-menu .bars::after {
   background: aqua;
-  box-shadow: 0 0 3px 1px white;
+  /* box-shadow: 0 0 3px 1px white; */
   /* filter: drop-shadow(0 0 2px white); */
   width: calc(100% - 10px);
   height: 3px;
@@ -323,6 +323,7 @@ header {
   justify-content: center;
   font: 600 20px Raleway;
   color: white;
+  text-decoration: none;
   transition: all 500ms ease-in-out;
   position: relative;
 }
