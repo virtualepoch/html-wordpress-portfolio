@@ -92,9 +92,8 @@ footer {
 
 /* SCROLL TO TOP BUTTON */
 #to-top-btn {
-  width: 50px;
+  width: 100px;
   height: 50px;
-  background: rgb(116, 210, 212, 0.5);
   border: 1px solid white;
   border-radius: 5px;
   position: fixed;
@@ -107,6 +106,10 @@ footer {
   align-items: center;
   justify-content: center;
   transition: bottom 300ms ease-in-out;
+}
+
+#to-top-btn:hover {
+  background: rgb(116, 210, 212, 0.5);
 }
 
 #to-top-btn.open {
@@ -176,7 +179,7 @@ header {
   border-radius: 50%;
   box-shadow: 0 0 20px 5px white;
   display: flex;
-  align-items: center;
+  align-items: top;
   justify-content: center;
   position: relative;
 }
@@ -191,42 +194,34 @@ header {
 
 @media (max-width: 700px) {
   .logo-container {
-    margin: 35px;
-    margin-bottom: 135px;
-    margin-right: 135px;
+    margin: 5px;
   }
 }
 
-.logo,
-.logo::before,
-.logo::after {
-  background: var(--blue-chrome-2);
-  width: 4px;
-  height: 50px;
+.logo {
+  background: var(--blue-chrome-3);
+  width: 3px;
+  height: 24px;
   border-radius: 50%;
   position: absolute;
+  top: 1px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transform-origin: 50% 100%;
 }
-
-.logo::before,
-.logo::after {
-  content: "";
-  width: 25px;
-  height: 3px;
+.logo:nth-child(1) {
+  height: 48px;
 }
-.logo::before {
-  transform: translateX(9px) translateY(8px) rotate(45deg);
+.logo:nth-child(2) {
+  rotate: 45deg;
 }
-
-.logo::after {
-  transform: translateX(9px) translateY(-8px) rotate(135deg);
+.logo:nth-child(3) {
+  rotate: 135deg;
 }
 
 .site-title {
   height: fit-content;
-  margin: 0 5px;
   padding: 5px 10px;
   font: 600 25px Neonsign;
   color: aqua;
@@ -294,10 +289,12 @@ header {
 
 .btn-nav-menu.open .bars::before {
   transform: rotate(45deg);
+  background: var(--pink-test);
 }
 
 .btn-nav-menu.open .bars::after {
   transform: rotate(-45deg);
+  background: var(--pink-test);
 }
 
 /* NAVIGATION MENU ///////////////// */
