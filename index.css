@@ -38,6 +38,7 @@
   --pink-theme-2-4: #f9b5d0;
   --dark-hot-pink: #d90166;
   --pink-test: #ff0077;
+  --heading-drop-shadow: drop-shadow(-3px 1px 1px var(--blue-chrome-1));
   --text-drop-shadow: drop-shadow(-2px 1px 1px var(--blue-chrome-3));
 }
 

@@ -33,38 +33,41 @@
 }
 
 .hello,
-.hero-heading {
+.hero-heading,
+.hero-content {
   padding: 20px 0;
   font: 600 30px Neonsign;
   color: aqua;
-  line-height: 150%;
   filter: var(--text-drop-shadow);
   position: relative;
   left: -100%;
+  transition: all 1s ease-in-out 1s;
 }
 
-.hello {
-  padding: 10px 0 0 0;
+.hello,
+.hero-heading {
+  filter: var(--heading-drop-shadow);
 }
 
 .hero-content {
-  position: relative;
-  left: -120%;
+  font: 600 20px Raleway;
+  color: white;
+  line-height: 150%;
 }
 
-.hero-section.load .hello,
-.hero-section.load .hero-heading,
-.hero-section.load .hero-content {
+.hello.load,
+.hero-heading.load,
+.hero-content.load {
   left: 0;
-  transition: left 1s ease-in-out 1s;
+  transition: all 1s ease-in-out 2s;
 }
 
 .hero-section.load .hero-heading {
-  transition-delay: 1.5s;
+  transition: all 1s ease-in-out 1.5s;
 }
 
 .hero-section.load .hero-content {
-  transition-duration: 2.5s;
+  transition: all 1s ease-in-out 2.5s;
 }
 
 .hero-content #name {
