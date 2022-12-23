@@ -51,11 +51,30 @@
             <a href="/projects.html" class="link">
                 <p class="link-text">Projects</p>
             </a>
-            <a href="/#contact" class="link" onclick="openCloseNavMenu()">
+            <div class="link" onclick="openCloseNavMenu()" onclick="openContactOverlay()">
                 <p class="link-text">Contact</p>
-            </a>
+            </div>
         </div>
-        <div class="nav-menu-underlay"></div>
+        <div class="contact-overlay">
+            <div class="btn-close-contact-overlay" onclick="openCloseContactOverlay()">
+                <div class="btn-bars"></div>
+            </div>
+            <div class="contact-wrapper">
+                <div id="contact">
+                    <p>CONTACT FOR SERVICES</p>
+                    <div class="btn-row">
+                        <div class="btn-contact"></div>
+                        <div class="btn-contact"></div>
+                        <div class="btn-contact"></div>
+                    </div>
+                    <div class="btn-row">
+                        <div class="btn-contact"></div>
+                        <div class="btn-contact"></div>
+                        <div class="btn-contact"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
     <section class="main-content">
@@ -73,14 +92,15 @@
                         <span class="word-tricks">t<span class="letter-r">r</span>icks</span> up
                         my sleeve. Here you can find links to <span><a class="link projects"
                                 href="/projects.html">projects</a></span> I've worked on as well
-                        as ways to <span><a href="#contact" class="link contact">contact</a></span> me for
+                        as ways to <span><a href="#contact"
+                                class="link contact btn-open-contact-overlay">contact</a></span> me for
                         services. Thanks for visiting!
                     </h2>
                 </div>
             </div>
             <div class="image-flip-section">
                 <div class="image-flip-row">
-                    <a href="#contact" class="image-flip-container one">
+                    <a href="#contact" class="image-flip-container one" onclick="openCloseContactOverlay()">
                         <div class="image-flip">
                             <div class="side front">Contact</div>
                             <div class="side back">Contact</div>
@@ -112,7 +132,7 @@
                             <div class="side bottom"></div>
                         </div>
                     </a>
-                    <a href="#contact" class="image-flip-container four">
+                    <a href="#contact" class="image-flip-container four btn-open-contact-overlay">
                         <div class="image-flip">
                             <div class="side front">Contact</div>
                             <div class="side back">Contact</div>
@@ -173,8 +193,6 @@
                     <div class="btn-contact"></div>
                 </div>
             </div>
-
-
         </div>
     </footer>
 
@@ -186,8 +204,6 @@
         //     insertNameTitle();
         // }, 4000);
 
-        insertNameTitle();
-
         function insertNameTitle() {
             var name = "Craig Kaufman";
             var title = "Front-End Web Developer";
@@ -197,6 +213,7 @@
             document.querySelector(".hero-heading").classList.add("load");
             document.querySelector(".hero-content").classList.add("load");
         }
+        insertNameTitle();
 
         function scrollToTop() {
             window.scrollTo(0, 0);
@@ -214,6 +231,7 @@
             }
         }
 
+        // OPEN CLOSE NAVIGATION MENU //////////////////////////////////
         const btnNavMenu = document.getElementById("btn-nav-menu");
         const navMenu = document.getElementById("nav-menu");
 
@@ -221,6 +239,23 @@
             navMenu.classList.toggle("open");
             btnNavMenu.classList.toggle("open");
         }
+
+        //////////////////////////////////////////////////////////////////
+
+        // OPEN CLOSE CONTACT OVERLAY ////////////////////////////////////////
+
+        const contactOverlay = document.querySelector(".contact-overlay")
+
+        function openCloseContactOverlay() {
+            contactOverlay.classList.toggle('open')
+        }
+
+        const contactBtns = document.getElementsByClassName("btn-open-contact-overlay");
+
+        for (let i = 0; i < contactBtns.length; i++) {
+            contactBtns[i].addEventListener("click", openCloseContactOverlay)
+        }
+        //////////////////////////////////////////////////////////
 
     </script>
 </body>

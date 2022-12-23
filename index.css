@@ -95,6 +95,48 @@ footer {
 footer p {
   padding: 50px 20px;
 }
+
+.contact-overlay {
+  height: 100vh;
+  padding: 20px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-overlay.open {
+  display: flex;
+}
+
+.btn-close-contact-overlay {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: -3px 3px 5px 1px rgb(0, 0, 0, 0.5), inset -3px 3px 5px 1px rgb(255, 255, 255, 0.3), inset 4px -4px 5px 1px rgb(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+.btn-close-contact-overlay .btn-bars {
+  width: 70%;
+  height: 7px;
+  position: absolute;
+}
+.btn-close-contact-overlay .btn-bars::before,
+.btn-close-contact-overlay .btn-bars::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgb(255, 0, 0, 0.5);
+  position: absolute;
+  transform: rotate(45deg);
+}
+.btn-close-contact-overlay .btn-bars::after {
+  transform: rotate(-45deg);
+}
 .contact-wrapper {
   width: 100%;
   max-width: 1000px;
@@ -115,6 +157,7 @@ footer p {
 }
 #contact p {
   padding: 10px;
+  color: white;
 }
 .btn-row {
   display: flex;
