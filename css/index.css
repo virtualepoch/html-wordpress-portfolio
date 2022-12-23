@@ -80,7 +80,7 @@ footer {
 /* CONTACT OVERLAY ////////////////////////////////////////////////// */
 .contact-overlay-container {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: rgb(11, 22, 52, 0.9);
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
@@ -98,7 +98,7 @@ footer {
 .contact-overlay {
   height: fit-content;
   min-height: 100%;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -140,6 +140,39 @@ footer {
 .btn-close-contact-overlay .btn-bars::after {
   transform: rotate(-45deg);
 }
+
+.btn-close-contact-overlay-arrow {
+  width: 80px;
+  height: 50px;
+  box-shadow: inset 0 10px 5px 1px rgb(0, 0, 0, 0.3);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto; */
+}
+
+.btn-close-contact-overlay-arrow .btn-arrow-line {
+  width: 40px;
+  height: 2px;
+  background: white;
+  position: absolute;
+  border-radius: 10px;
+}
+.btn-close-contact-overlay-arrow .btn-arrow-line:nth-child(1) {
+  left: 3px;
+  transform: rotate(-30deg);
+}
+.btn-close-contact-overlay-arrow .btn-arrow-line:nth-child(2) {
+  right: 3px;
+  transform: rotate(30deg);
+}
+
 .contact-wrapper {
   width: 100%;
   max-width: 1000px;
