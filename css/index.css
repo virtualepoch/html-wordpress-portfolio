@@ -1,19 +1,19 @@
 /* FONTS */
 @font-face {
   font-family: Aseline;
-  src: url(./fonts/Aseline.ttf);
+  src: url(../fonts/Aseline.ttf);
 }
 @font-face {
   font-family: Everleigh;
-  src: url(./fonts/Everleigh.otf);
+  src: url(../fonts/Everleigh.otf);
 }
 @font-face {
   font-family: Neonsign;
-  src: url(./fonts/NeonsignRegular.ttf);
+  src: url(../fonts/NeonsignRegular.ttf);
 }
 @font-face {
   font-family: Razor Blade;
-  src: url(./fonts/RazorBlade.ttf);
+  src: url(../fonts/RazorBlade.ttf);
 }
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
@@ -67,50 +67,53 @@ footer {
 .footer-background {
   width: 100%;
   aspect-ratio: 1920/1080;
-  background: url(assets/body-bg.jpg) 0 0 / 100%;
+  background: url(/images/body-bg.jpg) 0 0 / 100%;
   position: fixed;
   z-index: 1;
 }
 
 .footer-background {
-  background: url(assets/body-bg.jpg) 0 0 / 100%;
+  background: url(/images/body-bg.jpg) 0 0 / 100%;
   bottom: 0;
 }
 
-footer {
+/* CONTACT OVERLAY ////////////////////////////////////////////////// */
+.contact-overlay-container {
   width: 100%;
-  aspect-ratio: 1920/1080;
-  background: rgb(11, 22, 52, 0.7);
+  height: 100%;
+  background: rgb(11, 22, 52, 0.9);
+  -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
-  box-shadow: 0 -2px 5px 2px rgb(0, 0, 0, 0.3);
-  font: 600 15px Raleway;
-  color: white;
-  padding: 40px;
+  position: fixed;
+  top: -100%;
+  z-index: 8888;
+  overflow-y: auto;
+  transition: all 1s ease;
+}
+
+.contact-overlay-container.open {
+  top: 0;
+}
+
+.contact-overlay {
+  height: fit-content;
+  min-height: 100%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-footer p {
-  padding: 50px 20px;
-}
-
-.contact-overlay {
-  height: 100vh;
-  padding: 20px;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contact-overlay.open {
-  display: flex;
+.contact-overlay.footer {
+  background: rgb(11, 22, 52, 0.9);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
 }
 
 .btn-close-contact-overlay {
-  width: 70px;
-  height: 70px;
+  min-width: 70px;
+  min-height: 70px;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -140,6 +143,7 @@ footer p {
 .contact-wrapper {
   width: 100%;
   max-width: 1000px;
+  height: 100%;
   margin: 50px auto;
   padding: 30px;
   border-radius: 30px;
@@ -164,15 +168,27 @@ footer p {
   justify-content: center;
   flex-wrap: wrap;
 }
-.btn-contact {
+.btn-contact-link {
   width: 60px;
   height: 60px;
   box-shadow: 1px -2px 5px 1px rgb(255, 255, 255, 0.1), -4px 4px 5px 1px rgb(0, 0, 0, 0.4);
   border-radius: 10px;
   margin: 20px;
+  cursor: pointer;
+  background: center / 50% no-repeat;
 }
 
-/* SCROLL TO TOP BUTTON */
+.btn-contact-link.github {
+  background-image: url(/icons/github-brands.svg);
+}
+.btn-contact-link.linkedin {
+  background-image: url(/icons/linkedin-brands.svg);
+}
+.btn-contact-link.email {
+  background-image: url(/icons/envelope-solid.svg);
+}
+
+/* SCROLL TO TOP BUTTON ///////////////////////////////////////////////////////////////// */
 #to-top-btn {
   width: 80px;
   height: 50px;
@@ -247,7 +263,7 @@ footer p {
   }
 }
 
-/* MAIN PAGE HEADER */
+/* MAIN PAGE HEADER /////////////////////////////////////////////////////////////////////////////// */
 header {
   background: rgb(11, 22, 52, 0.7);
   -webkit-backdrop-filter: blur(3px);
@@ -319,10 +335,10 @@ header {
   height: 48px;
 }
 .logo:nth-child(2) {
-  rotate: 45deg;
+  transform: rotate(45deg);
 }
 .logo:nth-child(3) {
-  rotate: 135deg;
+  transform: rotate(135deg);
 }
 
 .site-title {
@@ -349,8 +365,8 @@ header {
   color: white;
   filter: drop-shadow(-5px 1px 1px var(--blue-chrome-3));
 }
-
-/* NAVIGATION MENU BUTTON STYLING ///////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////// */
+/* NAVIGATION MENU BUTTON STYLING ////////////////////////////////////////////////////////// */
 .btn-nav-menu {
   width: 50px;
   height: 50px;
@@ -402,7 +418,8 @@ header {
   background: var(--pink-test);
 }
 
-/* NAVIGATION MENU ///////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////// */
+/* NAVIGATION MENU ////////////////////////////////////////////////////////// */
 .nav-menu {
   width: 100%;
   height: fit-content;
