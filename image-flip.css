@@ -1,19 +1,5 @@
+/* COLORS /////////////////////////////////////////////////////////// */
 :root {
-  --rotating-square-size: 150px;
-  --rotating-square-gap: 10px;
-  --backdrop-filter: blur(3px);
-
-  --animation-duration: 10s;
-  --box-1-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--blue-chrome-2-opaque);
-  --box-1-text: var(--blue-chrome-6);
-  --box-2-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--blue-chrome-3-opaque);
-  --box-2-text: var(--blue-chrome-4);
-  --box-3-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--blue-chrome-4-opaque);
-  --box-3-text: var(--blue-chrome-2);
-  --box-4-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--blue-chrome-2-opaque);
-  --box-4-text: var(--blue-chrome-6);
-
-  /* COLORS */
   --classic-double-blue-1: #12232e;
   --classic-double-blue-2: #203647;
   --classic-double-blue-3: #007cc7;
@@ -31,6 +17,30 @@
   --blue-chrome-5-opaque: rgb(226, 220, 212, 0.3);
   --blue-chrome-6: #fff;
   --blue-chrome-6-opaque: rgb(255, 255, 255, 0.7);
+}
+
+/* [FLIP BOX] : SIZE : SPACING : BLUR : ANIMATION DURATION : BACKGROUND : TEXT COLOR */
+:root {
+  --rotating-square-size: 150px;
+  --rotating-square-gap: 10px;
+  --backdrop-filter: blur(3px);
+  --animation-duration: 9s;
+
+  /* FLIP BOX # 1 */
+  --flip-box-1-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--blue-chrome-2-opaque);
+  --flip-box-1-text: var(--blue-chrome-6);
+
+  /* FLIP BOX # 2 */
+  --flip-box-2-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--blue-chrome-3-opaque);
+  --flip-box-2-text: var(--blue-chrome-4);
+
+  /* FLIP BOX # 3 */
+  --flip-box-3-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--blue-chrome-4-opaque);
+  --flip-box-3-text: var(--blue-chrome-2);
+
+  /* FLIP BOX # 4 */
+  --flip-box-4-background-image: url(./assets/vrheadset.jpg) 50%/100% var(--blue-chrome-2-opaque);
+  --flip-box-4-text: var(--blue-chrome-6);
 }
 
 .image-flip-section {
@@ -135,9 +145,9 @@
 /* BACKGROUND IMAGE */
 .image-flip-row:nth-child(1) .image-flip-container:nth-child(1) .front,
 .image-flip-row:nth-child(1) .image-flip-container:nth-child(1) .back {
-  background: var(--box-1-background-image);
+  background: var(--flip-box-1-background-image);
   backdrop-filter: var(--backdrop-filter);
-  color: var(--box-1-text);
+  color: var(--flip-box-1-text);
 }
 
 /* Z-INDEX CHANGE ANIMATION */
@@ -177,8 +187,8 @@
 /* BACKGROUND IMAGE */
 .image-flip-row:nth-child(1) .image-flip-container:nth-child(2) .front,
 .image-flip-row:nth-child(1) .image-flip-container:nth-child(2) .back {
-  background: var(--box-2-background-image);
-  color: var(--box-2-text);
+  background: var(--flip-box-2-background-image);
+  color: var(--flip-box-2-text);
 }
 
 /* FLIP ANIMATION */
@@ -202,8 +212,8 @@
 /* BACKGROUND IMAGE */
 .image-flip-row:nth-child(2) .image-flip-container:nth-child(1) .front,
 .image-flip-row:nth-child(2) .image-flip-container:nth-child(1) .back {
-  background: var(--box-3-background-image);
-  color: var(--box-3-text);
+  background: var(--flip-box-3-background-image);
+  color: var(--flip-box-3-text);
 }
 .image-flip-row:nth-child(2) .image-flip-container:nth-child(1) .back {
   text-decoration: overline;
@@ -243,8 +253,8 @@
 /* BACKGROUND IMAGE */
 .image-flip-row:nth-child(2) .image-flip-container:nth-child(2) .front,
 .image-flip-row:nth-child(2) .image-flip-container:nth-child(2) .back {
-  background: var(--box-4-background-image);
-  color: var(--box-4-text);
+  background: var(--flip-box-4-background-image);
+  color: var(--flip-box-4-text);
 }
 .image-flip-row:nth-child(2) .image-flip-container:nth-child(2) .back {
   text-decoration: overline;
@@ -265,3 +275,10 @@
     transform: rotateX(720deg);
   }
 }
+
+ /* SMALL SCREEN SIZE BACKDROP FILTER CHANGE ////////////////////////////////// */
+ @media (max-width:700px) {
+  .image-flip .side{
+    backdrop-filter: none;
+  }
+ }
