@@ -1,4 +1,4 @@
-/* MAIN PAGE CONTENT /////////////////// */
+/* MAIN PAGE CONTENT /////////////////////////////////////// */
 .main-content {
   max-width: 1200px;
   margin: auto;
@@ -8,6 +8,7 @@
 .main-content .link {
   text-decoration: none;
 }
+/* MAIN PAGE CONTENT \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
 /* TOP PAGE HEADING */
 .heading {
@@ -29,7 +30,7 @@
 
 .hero-section-container {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .hello,
@@ -40,8 +41,8 @@
   color: aqua;
   filter: var(--text-drop-shadow);
   position: relative;
-  left: -100%;
-  transition: all 1s ease-in-out 1s;
+  /* left: -100%; */
+  /* transition: all 1s ease-in-out 1s; */
 }
 
 .hello,
@@ -49,26 +50,53 @@
   filter: var(--heading-drop-shadow);
 }
 
+/* HERO SECTION CONTENT BLUR ANIMATION //////////////////////////////////////////////// */
+.hello {
+  opacity: 0;
+  animation: hello-blur-effect 5s ease;
+  opacity: 1;
+}
+
+.hero-heading {
+  opacity: 0;
+  animation: hello-blur-effect 7s ease;
+  opacity: 1;
+}
+
 .hero-content {
   font: 600 20px Raleway;
   color: white;
   line-height: 150%;
+  opacity: 0;
+  animation: hello-blur-effect 9s ease;
+  opacity: 1;
 }
 
-.hello.load,
+@keyframes hello-blur-effect {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* HERO SECTION CONTENT BLUR ANIMATION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+
+/* .hello.load,
 .hero-heading.load,
 .hero-content.load {
   left: 0;
   transition: all 1s ease-in-out 2s;
 }
 
-.hero-section.load .hero-heading {
+.hero-heading.load {
   transition: all 1s ease-in-out 1.5s;
 }
 
-.hero-section.load .hero-content {
+.hero-content.load {
   transition: all 1s ease-in-out 2.5s;
-}
+} */
 
 .hero-content #name {
   color: aqua;
@@ -95,7 +123,7 @@
   filter: var(--text-drop-shadow);
 }
 
-/* PAGE CONTENT */
+/* PAGE CONTENT /////////////////////////////////////////////////////////// */
 .content-row {
   background: var(--blue-chrome-2);
   color: var(--blue-chrome-4);
@@ -157,3 +185,4 @@
 .content-3 .content-content {
   filter: drop-shadow(-2px 2px 0 var(--blue-chrome-3));
 }
+/* PAGE CONTENT \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
