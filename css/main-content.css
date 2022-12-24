@@ -145,7 +145,7 @@
   display: flex;
   gap: 10px;
   position: relative;
-  transition: all 1.5s ease;
+  transition: all 1s ease;
 }
 
 .content-row-container:nth-child(even) .content-row{
