@@ -1,0 +1,260 @@
+/* MAIN PAGE HEADER /////////////////////////////////////////////////////////////////////////////// */
+header {
+  background: rgb(11, 22, 52, 0.7);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 888;
+  box-shadow: 0 2px 5px 2px rgb(0, 0, 0, 0.3);
+}
+
+.top-header {
+  max-width: 1200px;
+  min-height: 50px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-header .side {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-container {
+  width: 50px;
+  height: 50px;
+  margin: 15px;
+  background: radial-gradient(circle at 55% 45%, white 20%, aqua);
+  /* !!! FOR SOME REASON I COULDN'T GET 'BORDER-BOX' TO WORK BELOW... HAD TO USE PSEUDO ELEMENT BELOW TO ACHIEVE PROPER BORDER AND ELEMENT POSITION FOR THE LOGO */
+  /* border-left: 7px solid var(--classic-double-blue-3); */
+  /* box-sizing: border-box; */
+  border-radius: 50%;
+  box-shadow: 0 0 20px 5px white;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  position: relative;
+}
+
+.logo-container::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-left: solid 7px var(--blue-chrome-3);
+  border-radius: 50%;
+}
+
+@media (max-width: 700px) {
+  .logo-container {
+    margin: 5px;
+  }
+}
+
+.logo {
+  background: var(--blue-chrome-3);
+  width: 3px;
+  height: 24px;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: 50% 100%;
+}
+.logo:nth-child(1) {
+  height: 48px;
+  width: 5px;
+}
+.logo:nth-child(2) {
+  transform: rotate(45deg);
+}
+.logo:nth-child(3) {
+  transform: rotate(135deg);
+}
+
+.site-title {
+  height: fit-content;
+  padding: 5px 10px;
+  font: 600 25px Neonsign;
+  color: aqua;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, aqua, var(--blue-chrome-3));
+  filter: drop-shadow(5px 1px 1px var(--blue-chrome-3));
+}
+
+.site-title-sub {
+  height: fit-content;
+  margin: 0 5px;
+  padding: 5px 10px;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  border-bottom-left-radius: 5px;
+  font: 500 30px Raleway;
+  color: white;
+  filter: drop-shadow(-5px 1px 1px var(--blue-chrome-3));
+}
+/* /////////////////////////////////////////////////////////////////////////////////////////// */
+/* NAVIGATION MENU BUTTON STYLING ////////////////////////////////////////////////////////// */
+.btn-nav-menu {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  padding: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+
+.btn-nav-menu .bars,
+.btn-nav-menu .bars::before,
+.btn-nav-menu .bars::after {
+  background: aqua;
+  /* box-shadow: 0 0 3px 1px white; */
+  /* filter: drop-shadow(0 0 2px white); */
+  width: calc(100% - 10px);
+  height: 3px;
+  border-radius: 3px;
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-nav-menu .bars::before,
+.btn-nav-menu .bars::after {
+  content: "";
+  width: 100%;
+  transform: translateY(-8px);
+}
+
+.btn-nav-menu .bars::after {
+  transform: translateY(8px);
+}
+
+.btn-nav-menu.open .bars {
+  background: transparent;
+  box-shadow: none;
+}
+
+.btn-nav-menu.open .bars::before {
+  transform: rotate(45deg);
+  background: var(--pink-test);
+}
+
+.btn-nav-menu.open .bars::after {
+  transform: rotate(-45deg);
+  background: var(--pink-test);
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////// */
+/* NAVIGATION MENU ////////////////////////////////////////////////////////// */
+.nav-menu {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 20px; */
+  position: relative;
+  overflow-y: auto;
+}
+
+.nav-menu .link {
+  width: calc(100% - 40px);
+  max-width: 800px;
+  height: 70px;
+  margin: 20px auto;
+  background: radial-gradient(aqua, transparent);
+  box-shadow: inset -4px 4px 7px 1px rgb(255, 255, 255, 0.3), inset 4px -4px 7px 1px rgb(0, 0, 0, 0.4), -1px 2px 7px 1px rgb(0, 0, 0, 0.4);
+  /* -webkit-backdrop-filter: blur(3px); */
+  /* backdrop-filter: blur(3px); */
+  border-radius: 70px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 600 20px Raleway;
+  color: white;
+  transition: all 500ms ease-in-out;
+  position: absolute;
+  top: -100vh;
+}
+@media (max-width: 700px) {
+  .nav-menu.open {
+    height: calc(100vh - 100px);
+    justify-content: space-around;
+  }
+}
+/* @media (max-height:400px) {
+    .nav-menu.open{
+      height: fit-content;
+      position: fixed;
+      top: 0px;
+      justify-content: space-around;
+    }
+  } */
+.nav-menu .link:nth-child(1) {
+  transition: all 800ms ease-in-out;
+}
+.nav-menu .link:nth-child(2) {
+  transition: all 700ms ease-in-out;
+}
+.nav-menu .link:nth-child(3) {
+  transition: all 600ms ease-in-out;
+}
+.nav-menu .link:nth-child(4) {
+  transition: all 500ms ease-in-out;
+  cursor: pointer;
+}
+.nav-menu.open .link {
+  top: 0;
+}
+
+.nav-menu .link.active {
+  display: none;
+}
+
+.nav-menu .link:hover {
+  background: rgb(0, 255, 255, 0.5);
+}
+
+.nav-menu.open .link {
+  position: relative;
+}
+
+.link-text {
+  filter: drop-shadow(-2px 1px 1px black);
+  position: relative;
+  top: 50px;
+  transition: all 500ms ease-in-out 200ms;
+}
+.nav-menu.open .link-text {
+  top: 0;
+}
+@media (max-width: 700px) {
+  .nav-menu .link {
+    max-width: 200px;
+    height: 50px;
+    min-height: 50px;
+  }
+  .nav-menu .link:nth-child(1) {
+    transition: none;
+  }
+  .nav-menu .link:nth-child(2) {
+    transition: none;
+  }
+  .nav-menu .link:nth-child(3) {
+    transition: none;
+  }
+  .nav-menu .link:nth-child(4) {
+    transition: none;
+  }
+}

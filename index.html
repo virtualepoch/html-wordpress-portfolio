@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main-content.css">
     <link rel="stylesheet" href="css/image-flip.css">
     <title>CK Wordpress</title>
@@ -16,6 +17,7 @@
 
 <body>
 
+    <!-- GLOBAL SCOPED SITE ELEMENTS (WITH FIXED POSITION)/////////////////////////////////////////////////// -->
     <div id="to-top-btn" onclick="scrollToTop()">
         <div class="to-top-btn-bars"></div>
     </div>
@@ -30,7 +32,7 @@
                 <div class="btn-bars"></div>
             </div>
             <div class="contact-wrapper">
-                <div id="contact">
+                <div class="contact">
                     <p>CONTACT FOR SERVICES</p>
                     <div class="btn-row">
                         <div class="btn-contact-link github"></div>
@@ -38,9 +40,9 @@
                         <div class="btn-contact-link email"></div>
                     </div>
                     <div class="btn-row">
-                        <div class="btn-contact-link"></div>
-                        <div class="btn-contact-link"></div>
-                        <div class="btn-contact-link"></div>
+                        <div class="btn-contact-link facebook"></div>
+                        <div class="btn-contact-link resume"></div>
+                        <div class="btn-contact-link facebook-2"></div>
                     </div>
                 </div>
             </div>
@@ -69,7 +71,7 @@
             </div>
         </div>
         <div class="nav-menu" id="nav-menu">
-            <a href="/" class="link">
+            <a href="/" class="link active">
                 <p class="link-text">Home</p>
             </a>
             <a href="/about.html" class="link">
@@ -78,7 +80,7 @@
             <a href="/projects.html" class="link">
                 <p class="link-text">Projects</p>
             </a>
-            <div class="link" onclick="openCloseNavMenu()" onclick="openContactOverlay()">
+            <div class="link" onclick="openCloseNavMenu(), openCloseContactOverlay()">
                 <p class="link-text">Contact</p>
             </div>
         </div>
@@ -97,17 +99,16 @@
                     <h2 class="hero-content">My name is <span id="name"></span>. I'm a <span id="title"></span>
                         with a few
                         <span class="word-tricks">t<span class="letter-r">r</span>icks</span> up
-                        my sleeve. Here you can find links to <span><a class="link projects"
+                        my sleeve. Here you can find links to <span><a class="text-link"
                                 href="/projects.html">projects</a></span> I've worked on as well
-                        as ways to <span><a href="#contact"
-                                class="link contact btn-open-contact-overlay">contact</a></span> me for
+                        as ways to <span class="text-link btn-open-contact-overlay">contact</span> me for
                         services. Thanks for visiting!
                     </h2>
                 </div>
             </div>
             <div class="image-flip-section">
                 <div class="image-flip-row">
-                    <a href="#contact" class="image-flip-container one" onclick="openCloseContactOverlay()">
+                    <div class="image-flip-container one" onclick="openCloseContactOverlay()">
                         <div class="image-flip">
                             <div class="side front">Contact</div>
                             <div class="side back">Contact</div>
@@ -116,7 +117,7 @@
                             <div class="side top"></div>
                             <div class="side bottom"></div>
                         </div>
-                    </a>
+                    </div>
                     <a href="/projects.html" class="image-flip-container two">
                         <div class="image-flip">
                             <div class="side front">Projects</div>
@@ -139,7 +140,7 @@
                             <div class="side bottom"></div>
                         </div>
                     </a>
-                    <a href="#contact" class="image-flip-container four btn-open-contact-overlay">
+                    <div class="image-flip-container four btn-open-contact-overlay">
                         <div class="image-flip">
                             <div class="side front">Contact</div>
                             <div class="side back">Contact</div>
@@ -148,7 +149,7 @@
                             <div class="side top"></div>
                             <div class="side bottom"></div>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -188,7 +189,7 @@
             soluta?</p>
         <div class="contact-overlay footer">
             <div class="contact-wrapper">
-                <div id="contact">
+                <div class="contact">
                     <p>CONTACT FOR SERVICES</p>
                     <div class="btn-row">
                         <div class="btn-contact-link github"></div>
