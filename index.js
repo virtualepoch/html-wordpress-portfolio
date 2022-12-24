@@ -19,10 +19,6 @@ function scrollToTop() {
   window.scrollTo(0, 0);
 }
 
-window.onscroll = function () {
-  scroll();
-};
-
 function scroll() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     document.getElementById("to-top-btn").classList.add("open");
@@ -41,8 +37,13 @@ function pageContentRow1Open() {
   }
 }
 
-window.addEventListener("scroll", pageContentRow1Open);
+// window.addEventListener("scroll", scroll, pageContentRow1Open);
 
+window.onscroll = function () {
+    scroll();
+    pageContentRow1Open()
+  };
+/////////////////////////////////////////////////////////////////
 // OPEN CLOSE NAVIGATION MENU //////////////////////////////////
 const btnNavMenu = document.getElementById("btn-nav-menu");
 const navMenu = document.getElementById("nav-menu");
