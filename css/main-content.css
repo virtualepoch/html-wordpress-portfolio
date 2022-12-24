@@ -147,17 +147,8 @@
 .content-row.row-1 {
   left: 100vw;
 }
-
-@media (min-width: 700px) {
-  .content-row.row-1.open {
-    left: 0;
-  }
-}
-
-@media (max-width: 700px) {
-  .content-row.row-1.open-mobile {
-    left: 0;
-  }
+.content-row.row-1.open {
+  left: 0;
 }
 
 .content-row.row-2 {
