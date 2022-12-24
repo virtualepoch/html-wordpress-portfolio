@@ -225,22 +225,23 @@ footer {
 .btn-contact-link.github {
   background-image: url(/icons/github-brands-white.svg);
 }
+
 .btn-contact-link.linkedin {
   background-image: url(/icons/linkedin-brands-white.svg);
 }
-.btn-contact-link.email {
-  background-image: url(/icons/square-github-white.svg);
-}
 
 .btn-contact-link.email {
-  background-image: url(/icons/square-github-white.svg);
+  background-image: url(/icons/envelope-solid-white.svg);
 }
+
 .btn-contact-link.facebook {
   background-image: url(/icons/facebook-white.svg);
 }
+
 .btn-contact-link.resume {
   background-image: url(/icons/file-pdf-solid-white.svg);
 }
+
 .btn-contact-link.facebook-2 {
   background-image: url(/icons/square-facebook-white.svg);
 }
@@ -261,6 +262,7 @@ footer {
   align-items: center;
   justify-content: center;
   transition: bottom 300ms ease-in-out;
+  cursor: pointer;
 }
 
 #to-top-btn:hover {
