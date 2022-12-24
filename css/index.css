@@ -21,16 +21,31 @@
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 /* VARIABLES ////////////////////////////////////////////////// */
 :root {
+  /* VARIOUS BLUES //////////////// */
+  --galaxy-blue: #000044;
+  --scotch-blue: #000077;
+  --navy-blue: #000080;
+  --dark-blue: #00008b;
+  --medium-blue: #0000cd;
+  --interstellar-blue: #001155;
+  --cetacean-blue: #001440;
+  --maastricht-blue: #001c3d;
+
+  /* CLASSIC DOUBLE BLUE /////////////// */
   --classic-double-blue-1: #12232e;
   --classic-double-blue-2: #203647;
   --classic-double-blue-3: #007cc7;
   --classic-double-blue-4: #4da8da;
   --classic-double-blue-5: #eefbfb;
+
+  /* BLUE CHROME ////////////////////// */
   --blue-chrome-1: #0b1634;
   --blue-chrome-2: #0e2650;
   --blue-chrome-3: #266c9d;
   --blue-chrome-4: #74d2d4;
   --blue-chrome-5: #e2dcd4;
+
+  /* PINK /////////////////////////////// */
   --pink-theme-1: #ff597b;
   --pink-theme-2: #ff8e9e;
   --pink-theme-3: #f9b5d0;
@@ -120,19 +135,23 @@ footer {
   backdrop-filter: blur(3px);
 }
 
+.btn-close-contact-overlay-container {
+  padding: 20px;
+}
+
 .btn-close-contact-overlay {
-  min-width: 70px;
-  min-height: 70px;
+  min-width: 60px;
+  min-height: 60px;
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  box-shadow: -3px 3px 5px 1px rgb(0, 0, 0, 0.5), inset -3px 3px 5px 1px rgb(255, 255, 255, 0.3), inset 4px -4px 5px 1px rgb(0, 0, 0, 0.4);
+  box-shadow: 3px -3px 5px 1px rgb(255, 255, 255, 0.05), inset -3px 3px 5px 1px rgb(255, 255, 255, 0.08), inset 3px -3px 5px 1px rgb(0, 0, 0, 0.2), -3px 3px 5px 1px rgb(0, 0, 0, 0.12);
   cursor: pointer;
 }
 .btn-close-contact-overlay .btn-bars {
-  width: 50%;
+  width: 45%;
   height: 3px;
   position: absolute;
 }
@@ -214,12 +233,12 @@ footer {
 .btn-contact-link {
   width: 60px;
   height: 60px;
+  background: var(--blue-chrome-1) center / 50% no-repeat;
   box-shadow: 1px -2px 5px 1px rgb(255, 255, 255, 0.1), -4px 4px 5px 1px rgb(0, 0, 0, 0.4);
   border-radius: 10px;
   margin: 20px;
   cursor: pointer;
   -webkit-tap-highlight-color: white;
-  background: center / 50% no-repeat;
 }
 
 .btn-contact-link.github {

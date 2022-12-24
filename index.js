@@ -30,9 +30,10 @@ function scroll() {
 const pageContentRow1 = document.querySelector(".content-row.row-1");
 
 function pageContentRow1Open() {
-  if (document.body.scrollTop >= 50 || document.documentElement.scrollTop >= 50) {
+  const scrollTest = 300;
+  if (document.body.scrollTop >= scrollTest || document.documentElement.scrollTop >= scrollTest) {
     pageContentRow1.classList.add("open");
-  } else if (document.body.scrollTop <= 50 || document.documentElement.scrollTop <= 50) {
+  } else if (document.body.scrollTop <= scrollTest || document.documentElement.scrollTop <= scrollTest) {
     pageContentRow1.classList.remove("open");
   }
 }
@@ -40,9 +41,9 @@ function pageContentRow1Open() {
 // window.addEventListener("scroll", scroll, pageContentRow1Open);
 
 window.onscroll = function () {
-    scroll();
-    pageContentRow1Open()
-  };
+  scroll();
+  pageContentRow1Open();
+};
 /////////////////////////////////////////////////////////////////
 // OPEN CLOSE NAVIGATION MENU //////////////////////////////////
 const btnNavMenu = document.getElementById("btn-nav-menu");
