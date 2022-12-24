@@ -134,6 +134,9 @@
 
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 /* PAGE CONTENT /////////////////////////////////////////////// */
+.content-row-container{
+  overflow: hidden;
+}
 .content-row {
   background: var(--blue-chrome-2);
   color: var(--blue-chrome-4);
