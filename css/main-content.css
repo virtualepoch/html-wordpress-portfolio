@@ -3,7 +3,7 @@
 .main-content {
   max-width: 1200px;
   margin: auto;
-  padding: 20px;
+  padding: 20px 0;
   padding-bottom: 200px;
 }
 
@@ -166,6 +166,7 @@
 /* PAGE CONTENT /////////////////////////////////////////////// */
 .content-row-container {
   overflow: hidden;
+  padding: 0 20px;
 }
 
 .content-row {
