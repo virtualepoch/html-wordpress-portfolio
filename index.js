@@ -85,7 +85,7 @@ window.addEventListener(
       startX,
       startY,
       dist,
-      threshold = 150, //required min distance traveled to be considered swipe
+      threshold = 50, //required min distance traveled to be considered swipe
       allowedTime = 200, // maximum time allowed to travel that distance
       elapsedTime,
       startTime;
