@@ -22,97 +22,118 @@
   }
 }
 
-.hero-section {
+.hero-section-container {
   width: 100%;
   min-width: 300px;
+  height: 100%;
+  min-height: 300px;
   color: white;
-  font: 500 15px Raleway;
+  font: 500 30px Raleway;
+  filter: drop-shadow(-2px 3px 1px rgb(0, 0, 0, 0.5));
   padding: 20px;
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.hero-section-container {
+.hero-section {
   position: relative;
   /* overflow: hidden; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.hello,
-.hero-heading,
-.hero-content {
-  padding: 20px 0;
-  font: 600 30px Neonsign;
-  color: aqua;
-  filter: var(--text-drop-shadow);
-  position: relative;
-  /* left: -100%; */
-  /* transition: all 1s ease-in-out 1s; */
-}
-
-.hello,
-.hero-heading {
-  filter: var(--heading-drop-shadow);
-}
-
-/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
-/* HERO SECTION CONTENT BLUR ANIMATION //////////////////////// */
-.hello {
+.hero-section .text {
+  position: absolute;
+  transform: scale(0);
   opacity: 0;
-  animation: hello-blur-effect 5s ease;
-  opacity: 1;
 }
-
-.hero-heading {
-  opacity: 0;
-  animation: hello-blur-effect 7s ease;
-  opacity: 1;
+:root {
+  --hero-section-anim-duration: 15s;
 }
-
-.hero-content {
-  font: 600 20px Raleway;
-  color: white;
-  line-height: 150%;
-  opacity: 0;
-  animation: hello-blur-effect 9s ease;
-  opacity: 1;
+.hero-section .text:nth-child(1) {
+  animation: hero-anim-1 var(--hero-section-anim-duration) ease infinite;
 }
-
-@keyframes hello-blur-effect {
-  0% {
-    opacity: 0;
-  }
-  100% {
+@keyframes hero-anim-1 {
+  15% {
+    transform: scale(1);
     opacity: 1;
   }
+  20% {
+    transform: scale(1);
+    opacity: 0;
+  }
 }
-
-/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
-/* HERO SECTION CONTENT BLUR ANIMATION //////////////////////// */
-
-/* .hello.load,
-.hero-heading.load,
-.hero-content.load {
-  left: 0;
-  transition: all 1s ease-in-out 2s;
+.hero-section .text:nth-child(2) {
+  animation: hero-anim-2 var(--hero-section-anim-duration) ease infinite;
 }
-
-.hero-heading.load {
-  transition: all 1s ease-in-out 1.5s;
+@keyframes hero-anim-2 {
+  15% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  35% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 0;
+  }
 }
-
-.hero-content.load {
-  transition: all 1s ease-in-out 2.5s;
-} */
-
-.hero-content .name {
-  color: aqua;
-  filter: var(--text-drop-shadow);
+.hero-section .text:nth-child(3) {
+  animation: hero-anim-3 var(--hero-section-anim-duration) ease infinite;
 }
-
-.hero-content #title {
-  color: var(--pink-test);
-  filter: var(--text-drop-shadow);
+@keyframes hero-anim-3 {
+  30% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  55% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1);
+    opacity: 0;
+  }
 }
-
+.hero-section .text:nth-child(4) {
+  animation: hero-anim-4 var(--hero-section-anim-duration) ease infinite;
+}
+@keyframes hero-anim-4 {
+  55% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  75% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+.hero-section .text:nth-child(5) {
+  animation: hero-anim-5 var(--hero-section-anim-duration) ease infinite;
+}
+@keyframes hero-anim-5 {
+  75% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  95% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+/* /////////////////////////////////////////////////////////////// */
 .word-tricks {
   color: white;
 }
@@ -133,6 +154,9 @@
 }
 
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+/* HERO SECTION CONTENT BLUR ANIMATION //////////////////////// */
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 /* PAGE CONTENT /////////////////////////////////////////////// */
 .content-row-container {
   overflow: hidden;
@@ -148,13 +172,13 @@
   transition: all 1s ease;
 }
 
-.content-row-container:nth-child(even) .content-row{
+.content-row-container:nth-child(even) .content-row {
   left: 100vw;
 }
-.content-row-container:nth-child(odd) .content-row{
+.content-row-container:nth-child(odd) .content-row {
   left: -100vw;
 }
-.content-row-container.open .content-row{
+.content-row-container.open .content-row {
   left: 0;
 }
 /* .content-row-container.open .content-row.row-1 {
