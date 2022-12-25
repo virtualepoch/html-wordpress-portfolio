@@ -3,7 +3,8 @@
 .main-content {
   max-width: 1200px;
   margin: auto;
-  padding: 20px 0;
+  padding: 20px;
+  padding-bottom: 200px;
 }
 
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
@@ -28,13 +29,18 @@
   height: 100%;
   min-height: 300px;
   color: white;
-  font: 500 30px Raleway;
+  font: 500 50px Raleway;
   filter: drop-shadow(-2px 3px 1px rgb(0, 0, 0, 0.5));
   padding: 20px;
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 700px) {
+  .hero-section-container {
+    font-size: 30px;
+  }
 }
 
 .hero-section {
@@ -170,6 +176,21 @@
   gap: 10px;
   position: relative;
   transition: all 1s ease;
+}
+.banner {
+  content: "AD SPACE";
+  color: white;
+  width: 100%;
+  height: 300px;
+  background: var(--blue-chrome-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner::after {
+  content: "Banner";
+  font: 100 20px Raleway;
+  color: white;
 }
 
 .content-row-container:nth-child(even) .content-row {
