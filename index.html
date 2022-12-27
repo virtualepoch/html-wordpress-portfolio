@@ -17,41 +17,7 @@
 
 <body>
 
-    <!-- GLOBAL SCOPED SITE ELEMENTS (WITH FIXED POSITION)/////////////////////////////////////////////////// -->
-    <div id="button-to-top" onclick="scrollToTop()">
-        <div class="button-to-top-bars"></div>
-    </div>
-
-    <div class="footer-background"></div>
-
     <div class="landing-background"></div>
-
-    <div class="contact-overlay-container">
-        <div class="contact-overlay">
-            <div class="button-close-contact-overlay-container">
-                <div class="button-close-contact-overlay" onclick="openCloseContactOverlay()">
-                    <div class="button-bars"></div>
-                </div>
-            </div>
-            <div class="contact-wrapper">
-                <div class="contact">
-                    <div class="button-row">
-                        <div class="button-contact-link github"></div>
-                        <div class="button-contact-link linkedin"></div>
-
-                    </div>
-                    <div class="button-row">
-                        <div class="button-contact-link email"></div>
-                        <div class="button-contact-link resume"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="button-close-contact-overlay-arrow" onclick="openCloseContactOverlay()">
-                <div class="button-arrow-line"></div>
-                <div class="button-arrow-line"></div>
-            </div>
-        </div>
-    </div>
 
     <header>
         <div class="top-header">
@@ -246,6 +212,8 @@
         </div>
     </section>
 
+    <div class="footer-background"></div>
+
     <footer>
         <div class="contact-overlay footer">
             <div class="contact-wrapper">
@@ -262,6 +230,38 @@
             </div>
         </div>
     </footer>
+
+        <!-- GLOBAL SCOPED SITE ELEMENTS (WITH FIXED POSITION)/////////////////////////////////////////////////// -->
+        <div id="button-to-top" onclick="scrollToTop()">
+            <div class="button-to-top-bars"></div>
+        </div>
+
+        <div class="contact-overlay-container">
+            <div class="contact-overlay">
+                <div class="button-close-contact-overlay-container">
+                    <div class="button-close-contact-overlay" onclick="openCloseContactOverlay()">
+                        <div class="button-bars"></div>
+                    </div>
+                </div>
+                <div class="contact-wrapper">
+                    <div class="contact">
+                        <div class="button-row">
+                            <div class="button-contact-link github"></div>
+                            <div class="button-contact-link linkedin"></div>
+    
+                        </div>
+                        <div class="button-row">
+                            <div class="button-contact-link email"></div>
+                            <div class="button-contact-link resume"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-close-contact-overlay-arrow" onclick="openCloseContactOverlay()">
+                    <div class="button-arrow-line"></div>
+                    <div class="button-arrow-line"></div>
+                </div>
+            </div>
+        </div>
 
     <script src="index.js"></script>
 </body>
