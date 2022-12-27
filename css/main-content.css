@@ -1,4 +1,4 @@
-/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+/* ///////////////////////////////////////////////////////////// */
 /* GENERAL PAGE CONTENT /////////////////////////////////////// */
 .main-content {
   max-width: 1200px;
@@ -7,7 +7,7 @@
   padding-bottom: 200px;
 }
 
-/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+/* ////////////////////////////////////////////////////////// */
 /* MAIN PAGE CONTENT /////////////////////////////////////// */
 .heading {
   margin: 100px auto;
@@ -139,7 +139,7 @@
     opacity: 0;
   }
 }
-/* /////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////// */
 .word-tricks {
   color: white;
 }
@@ -159,11 +159,8 @@
   color: aqua;
 }
 
-/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
-/* HERO SECTION CONTENT BLUR ANIMATION //////////////////////// */
-
-/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
-/* PAGE CONTENT /////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////// */
+/* PAGE CONTENT //////////////////////////////////////////// */
 .content-row-container {
   overflow: hidden;
   padding: 0 20px;
@@ -298,14 +295,9 @@
   width: 96%;
   height: 92%;
   border-radius: 0.3rem;
-  background: url(/images/javascriptive-pc.png) 0 0 / 100% 100%;
   position: absolute;
   top: 2%;
   left: 2%;
-}
-
-.content-row.row-2 .responsive-image {
-  background: url(/images//virtual-epoch-pc.png) 0 0 / 100% 100%;
 }
 
 .responsive-image::after {
@@ -334,14 +326,9 @@
   width: 96%;
   height: 90%;
   border-radius: 0.2rem;
-  background: url(/images/javascriptive-phone.png) 0 0 / 100% 100%;
   position: absolute;
   top: 2%;
   left: 2%;
-}
-
-.content-row.row-2 .responsive-phone::before {
-  background: url(/images//virtual-epoch-phone.png) 0 0 / 100% 100%;
 }
 
 .responsive-phone::after {
@@ -359,7 +346,6 @@
 .column-image {
   width: 100%;
   aspect-ratio: 4/3;
-  background: url(/images/ck-logo.png) 0 0 / 100% 100%;
 }
 
 .banner {

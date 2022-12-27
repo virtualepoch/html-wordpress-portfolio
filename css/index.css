@@ -1,24 +1,8 @@
-/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+/* ///////////////////////////////////////////////////////////// */
 /* FONTS ////////////////////////////////////////////////////// */
-@font-face {
-  font-family: Aseline;
-  src: url(../fonts/Aseline.ttf);
-}
-@font-face {
-  font-family: Everleigh;
-  src: url(../fonts/Everleigh.otf);
-}
-@font-face {
-  font-family: Neonsign;
-  src: url(../fonts/NeonsignRegular.ttf);
-}
-@font-face {
-  font-family: Razor Blade;
-  src: url(../fonts/RazorBlade.ttf);
-}
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
-/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+/* ///////////////////////////////////////////////////////////// */
 /* VARIABLES ////////////////////////////////////////////////// */
 :root {
   /* VARIOUS BLUES //////////////// */
@@ -59,7 +43,7 @@
   --text-drop-shadow: drop-shadow(-2px 1px 1px var(--blue-chrome-3));
 }
 
-/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+/* ///////////////////////////////////////////////////////////// */
 /* GLOBAL STYLING ///////////////////////////////////////////// */
 html {
   scroll-behavior: smooth;
@@ -85,7 +69,6 @@ body {
 .footer-background {
   width: 100%;
   aspect-ratio: 1920/1080;
-  background: url(/images/body-bg.jpg) 0 0 / 100%;
   position: fixed;
   z-index: -1;
 }
@@ -94,7 +77,8 @@ body {
   bottom: 0;
   z-index: -2;
 }
-/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+/* ///////////////////////////////////////////////////////////// */
 /* CONTACT OVERLAY //////////////////////////////////////////// */
 .contact-overlay-container {
   width: 100%;
@@ -143,11 +127,13 @@ body {
   box-shadow: 3px -3px 5px 1px rgb(255, 255, 255, 0.05), inset -3px 3px 5px 1px rgb(255, 255, 255, 0.08), inset 3px -3px 5px 1px rgb(0, 0, 0, 0.2), -3px 3px 5px 1px rgb(0, 0, 0, 0.12);
   cursor: pointer;
 }
+
 .button-close-contact-overlay .button-bars {
   width: 45%;
   height: 3px;
   position: absolute;
 }
+
 .button-close-contact-overlay .button-bars::before,
 .button-close-contact-overlay .button-bars::after {
   content: "";
@@ -158,6 +144,7 @@ body {
   position: absolute;
   transform: rotate(45deg);
 }
+
 .button-close-contact-overlay .button-bars::after {
   transform: rotate(-45deg);
 }
@@ -173,10 +160,6 @@ body {
   justify-content: center;
   position: relative;
   cursor: pointer;
-  /* bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto; */
 }
 
 .button-close-contact-overlay-arrow .button-arrow-line {
@@ -186,10 +169,12 @@ body {
   position: absolute;
   border-radius: 10px;
 }
+
 .button-close-contact-overlay-arrow .button-arrow-line:nth-child(1) {
   left: 12px;
   transform: rotate(-30deg);
 }
+
 .button-close-contact-overlay-arrow .button-arrow-line:nth-child(2) {
   right: 12px;
   transform: rotate(30deg);
@@ -205,6 +190,7 @@ body {
   backdrop-filter: blur(7px);
   box-shadow: inset 4px -4px 8px 1px rgb(255, 255, 255, 0.08), inset -4px 4px 10px 2px rgb(0, 0, 0, 0.5);
 }
+
 .contact {
   height: fit-content;
   width: 100%;
@@ -215,6 +201,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 @media (max-height: 500px) {
   .contact-overlay {
     padding-top: 0;
@@ -229,20 +216,24 @@ body {
     flex-direction: row;
   }
 }
+
 @media (max-width: 700px) {
   .contact {
     background: var(--blue-chrome-1);
   }
 }
+
 .contact p {
   padding: 10px;
   color: white;
 }
+
 .button-row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
+
 .button-contact-link {
   width: 60px;
   height: 60px;
@@ -254,31 +245,7 @@ body {
   -webkit-tap-highlight-color: white;
 }
 
-.button-contact-link.github {
-  background-image: url(/icons/github-brands-white.svg);
-}
-
-.button-contact-link.linkedin {
-  background-image: url(/icons/linkedin-brands-white.svg);
-}
-
-.button-contact-link.email {
-  background-image: url(/icons/envelope-solid-white.svg);
-}
-
-.button-contact-link.facebook {
-  background-image: url(/icons/facebook-white.svg);
-}
-
-.button-contact-link.resume {
-  background-image: url(/icons/file-pdf-solid-white.svg);
-}
-
-.button-contact-link.facebook-2 {
-  background-image: url(/icons/square-facebook-white.svg);
-}
-
-/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+/* ///////////////////////////////////////////////////////////// */
 /* SCROLL TO TOP BUTTON /////////////////////////////////////// */
 #button-to-top {
   width: 80px;
@@ -330,6 +297,7 @@ body {
   left: 15px;
   transform: rotate(35deg);
 }
+
 @media (max-width: 700px) {
   #button-to-top {
     width: 50px;
