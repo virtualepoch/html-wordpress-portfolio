@@ -237,11 +237,11 @@ footer {
   backdrop-filter: blur(3px);
 }
 
-.btn-close-contact-overlay-container {
+.button-close-contact-overlay-container {
   padding: 20px;
 }
 
-.btn-close-contact-overlay {
+.button-close-contact-overlay {
   min-width: 60px;
   min-height: 60px;
   border-radius: 20px;
@@ -252,13 +252,13 @@ footer {
   box-shadow: 3px -3px 5px 1px rgb(255, 255, 255, 0.05), inset -3px 3px 5px 1px rgb(255, 255, 255, 0.08), inset 3px -3px 5px 1px rgb(0, 0, 0, 0.2), -3px 3px 5px 1px rgb(0, 0, 0, 0.12);
   cursor: pointer;
 }
-.btn-close-contact-overlay .btn-bars {
+.button-close-contact-overlay .button-bars {
   width: 45%;
   height: 3px;
   position: absolute;
 }
-.btn-close-contact-overlay .btn-bars::before,
-.btn-close-contact-overlay .btn-bars::after {
+.button-close-contact-overlay .button-bars::before,
+.button-close-contact-overlay .button-bars::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -267,11 +267,11 @@ footer {
   position: absolute;
   transform: rotate(45deg);
 }
-.btn-close-contact-overlay .btn-bars::after {
+.button-close-contact-overlay .button-bars::after {
   transform: rotate(-45deg);
 }
 
-.btn-close-contact-overlay-arrow {
+.button-close-contact-overlay-arrow {
   min-width: 80px;
   height: 50px;
   box-shadow: inset 0 4px 5px 1px rgb(0, 0, 0, 0.4);
@@ -288,18 +288,18 @@ footer {
   margin: auto; */
 }
 
-.btn-close-contact-overlay-arrow .btn-arrow-line {
+.button-close-contact-overlay-arrow .button-arrow-line {
   width: 30px;
   height: 2px;
   background: rgb(255, 255, 255, 0.5);
   position: absolute;
   border-radius: 10px;
 }
-.btn-close-contact-overlay-arrow .btn-arrow-line:nth-child(1) {
+.button-close-contact-overlay-arrow .button-arrow-line:nth-child(1) {
   left: 12px;
   transform: rotate(-30deg);
 }
-.btn-close-contact-overlay-arrow .btn-arrow-line:nth-child(2) {
+.button-close-contact-overlay-arrow .button-arrow-line:nth-child(2) {
   right: 12px;
   transform: rotate(30deg);
 }
@@ -328,7 +328,7 @@ footer {
   .contact-overlay {
     padding-top: 0;
   }
-  .btn-close-contact-overlay {
+  .button-close-contact-overlay {
     display: none;
   }
   .contact-wrapper {
@@ -347,12 +347,12 @@ footer {
   padding: 10px;
   color: white;
 }
-.btn-row {
+.button-row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.btn-contact-link {
+.button-contact-link {
   width: 60px;
   height: 60px;
   background: var(--blue-chrome-1) center / 50% no-repeat;
@@ -363,33 +363,33 @@ footer {
   -webkit-tap-highlight-color: white;
 }
 
-.btn-contact-link.github {
+.button-contact-link.github {
   background-image: url(/icons/github-brands-white.svg);
 }
 
-.btn-contact-link.linkedin {
+.button-contact-link.linkedin {
   background-image: url(/icons/linkedin-brands-white.svg);
 }
 
-.btn-contact-link.email {
+.button-contact-link.email {
   background-image: url(/icons/envelope-solid-white.svg);
 }
 
-.btn-contact-link.facebook {
+.button-contact-link.facebook {
   background-image: url(/icons/facebook-white.svg);
 }
 
-.btn-contact-link.resume {
+.button-contact-link.resume {
   background-image: url(/icons/file-pdf-solid-white.svg);
 }
 
-.btn-contact-link.facebook-2 {
+.button-contact-link.facebook-2 {
   background-image: url(/icons/square-facebook-white.svg);
 }
 
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 /* SCROLL TO TOP BUTTON /////////////////////////////////////// */
-#to-top-btn {
+#button-to-top {
   width: 80px;
   height: 50px;
   border-top: 1px solid white;
@@ -406,23 +406,23 @@ footer {
   cursor: pointer;
 }
 
-#to-top-btn:hover {
+#button-to-top:hover {
   background: rgb(116, 210, 212, 0.7);
 }
 
-#to-top-btn.open {
+#button-to-top.open {
   bottom: 0;
 }
 
-.to-top-btn-bars {
+.button-to-top-bars {
   width: 38px;
   height: 2px;
   position: relative;
   top: -5px;
 }
 
-.to-top-btn-bars::before,
-.to-top-btn-bars::after {
+.button-to-top-bars::before,
+.button-to-top-bars::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -430,35 +430,35 @@ footer {
   position: absolute;
 }
 
-.to-top-btn-bars::before {
+.button-to-top-bars::before {
   left: -15px;
   transform: rotate(-35deg);
 }
 
-.to-top-btn-bars::after {
+.button-to-top-bars::after {
   left: 15px;
   transform: rotate(35deg);
 }
 @media (max-width: 700px) {
-  #to-top-btn {
+  #button-to-top {
     width: 50px;
     height: 30px;
   }
-  #to-top-btn:hover {
+  #button-to-top:hover {
     background: none;
   }
-  .to-top-btn-bars {
+  .button-to-top-bars {
     width: 18px;
     height: 2px;
     position: relative;
     top: -5px;
   }
-  .to-top-btn-bars::before {
+  .button-to-top-bars::before {
     left: -7px;
     transform: rotate(-35deg);
   }
 
-  .to-top-btn-bars::after {
+  .button-to-top-bars::after {
     left: 7px;
     transform: rotate(35deg);
   }

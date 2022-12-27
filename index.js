@@ -7,9 +7,9 @@ function scrollToTop() {
 
 function showScrollTopBtn() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("to-top-btn").classList.add("open");
+    document.getElementById("button-to-top").classList.add("open");
   } else {
-    document.getElementById("to-top-btn").classList.remove("open");
+    document.getElementById("button-to-top").classList.remove("open");
   }
 }
 
@@ -45,12 +45,12 @@ function contentRowOpen() {
 ///////////////////////////////////////////////////////////////////
 // OPEN-CLOSE NAVIGATION MENU ////////////////////////////////////
 /////////////////////////////////////////////////////////////////
-const btnNavMenu = document.getElementById("btn-nav-menu");
+const buttonNavMenu = document.getElementById("button-nav-menu");
 const navMenu = document.getElementById("nav-menu");
 
 function openCloseNavMenu() {
   navMenu.classList.toggle("open");
-  btnNavMenu.classList.toggle("open");
+  buttonNavMenu.classList.toggle("open");
 }
 
 /////////////////////////////////////////////////////////////////
@@ -68,7 +68,7 @@ function contactOverlayScrollToTop() {
   contactOverlay.scrollTo(0, 0);
 }
 
-const contactBtns = document.getElementsByClassName("btn-open-contact-overlay");
+const contactBtns = document.getElementsByClassName("button-open-contact-overlay");
 
 for (let i = 0; i < contactBtns.length; i++) {
   contactBtns[i].addEventListener("click", openCloseContactOverlay);
@@ -131,23 +131,3 @@ window.addEventListener(
   },
   false
 ); // end window.onload
-
-// SCRAPPED FUNCTIONS ////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////
-
-// document.onload(onloadAddClass());
-// document.querySelector("body").addEventListener("onload", onloadAddClass());
-// setTimeout(function () {
-//     onloadAddClass();
-// }, 4000);
-
-// OPEN/CLOSE PAGE ROWS
-
-// function pageContentRow1Open() {
-//   const scrollTest = 350;
-//   if (document.body.scrollTop >= scrollTest || document.documentElement.scrollTop >= scrollTest) {
-//     contentRows.classList.add("open");
-//   } else if (document.body.scrollTop <= scrollTest || document.documentElement.scrollTop <= scrollTest) {
-//     contentRows.classList.remove("open");
-//   }
-// }
