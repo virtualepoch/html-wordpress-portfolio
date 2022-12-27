@@ -178,21 +178,6 @@
   position: relative;
   transition: all 1s ease;
 }
-.banner {
-  content: "AD SPACE";
-  color: white;
-  width: 100%;
-  height: 300px;
-  background: var(--blue-chrome-1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.banner::after {
-  content: "Banner";
-  font: 100 20px Raleway;
-  color: white;
-}
 
 .content-row-container:nth-child(even) .content-row {
   left: 100vw;
@@ -203,9 +188,6 @@
 .content-row-container.open .content-row {
   left: 0;
 }
-/* .content-row-container.open .content-row.row-1 {
-  left: 0;
-} */
 
 .content-row.row-2 {
   background: var(--blue-chrome-4);
@@ -214,6 +196,11 @@
 
 .content-row.row-3 {
   background: var(--blue-chrome-5);
+  color: var(--blue-chrome-3);
+}
+
+.content-row.row-4 {
+  background: var(--blue-chrome-4);
   color: var(--blue-chrome-3);
 }
 
@@ -262,4 +249,126 @@
 .content-3 .content-heading,
 .content-3 .content-content {
   filter: drop-shadow(-2px 2px 0 var(--blue-chrome-3));
+}
+
+.responsive-project {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: linear-gradient(rgb(221, 221, 221) 87%, white 93%, lightgray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.responsive-computer {
+  width: 80%;
+  height: 70%;
+  background: linear-gradient(135deg, rgb(218, 218, 218) 50%, white 50%, rgb(220, 220, 220));
+  box-shadow: 0 0 2rem rgb(0, 0, 0, 0.4);
+  border-radius: 0.4rem;
+  position: relative;
+}
+
+.responsive-computer::before {
+  content: "";
+  width: 20%;
+  height: 10%;
+  background: linear-gradient(to right, rgb(197, 197, 197), rgb(213, 213, 213), rgb(197, 197, 197));
+  box-shadow: 0 0 4rem 0.1rem rgb(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: -10%;
+  left: 40%;
+}
+
+.responsive-computer::after {
+  content: "";
+  width: 40%;
+  height: 3%;
+  background: linear-gradient(to right, white, rgb(213, 213, 213), white);
+  /* box-shadow: 0 -0.1rem 4rem 0.6rem rgb(0, 0, 0, 0.4); */
+  filter: drop-shadow(0 0 2rem black);
+  position: absolute;
+  bottom: -12%;
+  left: 30%;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.responsive-image {
+  width: 96%;
+  height: 92%;
+  border-radius: 0.3rem;
+  background: url(/images/javascriptive-pc.png) 0 0 / 100% 100%;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+}
+
+.content-row.row-2 .responsive-image {
+  background: url(/images//virtual-epoch-pc.png) 0 0 / 100% 100%;
+}
+
+.responsive-image::after {
+  content: "";
+  width: 4%;
+  height: 4%;
+  border-radius: 3rem;
+  background: white;
+  box-shadow: inset -0.1rem 0.1rem 0.2rem rgb(78, 78, 78, 0.4);
+  position: absolute;
+  bottom: -5%;
+  left: 48%;
+}
+.responsive-phone {
+  width: 20%;
+  height: 60%;
+  background: linear-gradient(135deg, rgb(218, 218, 218) 30%, white 30%, rgb(220, 220, 220));
+  box-shadow: -0.2rem 0.2rem 3rem rgb(0, 0, 0, 0.5);
+  border-radius: 0.3rem;
+  position: absolute;
+  right: -10%;
+  bottom: -10%;
+}
+.responsive-phone::before {
+  content: "";
+  width: 96%;
+  height: 90%;
+  border-radius: 0.2rem;
+  background: url(/images/javascriptive-phone.png) 0 0 / 100% 100%;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+}
+
+.content-row.row-2 .responsive-phone::before {
+  background: url(/images//virtual-epoch-phone.png) 0 0 / 100% 100%;
+}
+
+.responsive-phone::after {
+  content: "";
+  width: 12%;
+  height: 5%;
+  border-radius: 3rem;
+  background: white;
+  box-shadow: inset -0.1rem 0.1rem 0.2rem rgb(78, 78, 78, 0.4);
+  position: absolute;
+  bottom: 2%;
+  left: 44%;
+}
+
+.column-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: url(/images/ck-logo.png) 0 0 / 100% 100%;
+}
+
+.banner {
+  content: "AD SPACE";
+  color: white;
+  width: 100%;
+  height: 300px;
+  background: var(--blue-chrome-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
