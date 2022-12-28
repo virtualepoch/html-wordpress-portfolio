@@ -139,6 +139,18 @@
     opacity: 0;
   }
 }
+/* ////////////////////////////////////////////////////////// */
+
+.about-text,
+.projects-text {
+  animation: heading-scale 18s ease-in-out infinite;
+}
+
+@keyframes heading-scale {
+  50% {
+    transform: scale(1.2);
+  }
+}
 /* /////////////////////////////////////////////////////////////// */
 .word-tricks {
   color: white;
@@ -346,6 +358,7 @@
 .column-image {
   width: 100%;
   aspect-ratio: 4/3;
+  background-color: red;
 }
 
 .banner {

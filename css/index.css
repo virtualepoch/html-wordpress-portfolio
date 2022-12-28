@@ -5,40 +5,12 @@
 /* ///////////////////////////////////////////////////////////// */
 /* VARIABLES ////////////////////////////////////////////////// */
 :root {
-  /* VARIOUS BLUES //////////////// */
-  --galaxy-blue: #000044;
-  --scotch-blue: #000077;
-  --navy-blue: #000080;
-  --dark-blue: #00008b;
-  --medium-blue: #0000cd;
-  --interstellar-blue: #001155;
-  --cetacean-blue: #001440;
-  --maastricht-blue: #001c3d;
-
-  /* CLASSIC DOUBLE BLUE /////////////// */
-  --classic-double-blue-1: #12232e;
-  --classic-double-blue-2: #203647;
-  --classic-double-blue-3: #007cc7;
-  --classic-double-blue-4: #4da8da;
-  --classic-double-blue-5: #eefbfb;
-
   /* BLUE CHROME ////////////////////// */
   --blue-chrome-1: #0b1634;
   --blue-chrome-2: #0e2650;
   --blue-chrome-3: #266c9d;
   --blue-chrome-4: #74d2d4;
   --blue-chrome-5: #e2dcd4;
-
-  /* PINK /////////////////////////////// */
-  --pink-theme-1: #ff597b;
-  --pink-theme-2: #ff8e9e;
-  --pink-theme-3: #f9b5d0;
-  --pink-theme-2-1: #ff597b;
-  --pink-theme-2-2: #ff8e9e;
-  --pink-theme-2-3: #f9b5d0;
-  --pink-theme-2-4: #f9b5d0;
-  --dark-hot-pink: #d90166;
-  --pink-test: #ff0077;
   --heading-drop-shadow: drop-shadow(-3px 1px 1px var(--blue-chrome-1));
   --text-drop-shadow: drop-shadow(-2px 1px 1px var(--blue-chrome-3));
 }
@@ -247,7 +219,7 @@ body {
 
 /* ///////////////////////////////////////////////////////////// */
 /* SCROLL TO TOP BUTTON /////////////////////////////////////// */
-#button-to-top {
+.button-to-top {
   width: 80px;
   height: 50px;
   border-top: 1px solid white;
@@ -264,11 +236,11 @@ body {
   cursor: pointer;
 }
 
-#button-to-top:hover {
+.button-to-top:hover {
   background: rgb(116, 210, 212, 0.7);
 }
 
-#button-to-top.open {
+.button-to-top.open {
   bottom: 0;
 }
 
@@ -299,11 +271,11 @@ body {
 }
 
 @media (max-width: 700px) {
-  #button-to-top {
+  .button-to-top {
     width: 50px;
     height: 30px;
   }
-  #button-to-top:hover {
+  .button-to-top:hover {
     background: none;
   }
   .button-to-top-bars {

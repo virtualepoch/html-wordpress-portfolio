@@ -7,9 +7,9 @@ function scrollToTop() {
 
 function showScrollTopBtn() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("button-to-top").classList.add("open");
+    document.querySelector(".button-to-top").classList.add("open");
   } else {
-    document.getElementById("button-to-top").classList.remove("open");
+    document.querySelector(".button-to-top").classList.remove("open");
   }
 }
 
@@ -45,8 +45,8 @@ function contentRowOpen() {
 ///////////////////////////////////////////////////////////////////
 // OPEN-CLOSE NAVIGATION MENU ////////////////////////////////////
 /////////////////////////////////////////////////////////////////
-const buttonNavMenu = document.getElementById("button-nav-menu");
-const navMenu = document.getElementById("nav-menu");
+const buttonNavMenu = document.querySelector(".button-nav-menu");
+const navMenu = document.querySelector(".nav-menu");
 
 function openCloseNavMenu() {
   navMenu.classList.toggle("open");

@@ -1,4 +1,4 @@
-/* MAIN PAGE HEADER /////////////////////////////////////////////////////////////////////////////// */
+/* MAIN PAGE HEADER ////////////////////////////////// */
 header {
   background: rgb(11, 22, 52, 0.7);
   -webkit-backdrop-filter: blur(3px);
@@ -146,12 +146,12 @@ header {
 
 .button-nav-menu.open .bars::before {
   transform: rotate(45deg);
-  background: var(--pink-test);
+  background: magenta;
 }
 
 .button-nav-menu.open .bars::after {
   transform: rotate(-45deg);
-  background: var(--pink-test);
+  background: magenta;
 }
 
 /* /////////////////////////////////////////////////////////////////////////////////////////// */
