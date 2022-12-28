@@ -218,7 +218,7 @@ header {
   top: 0;
 }
 
-.nav-menu .link.active {
+.link.active {
   display: none;
 }
 

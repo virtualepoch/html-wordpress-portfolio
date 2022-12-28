@@ -38,16 +38,24 @@
   background: url(/images/javascriptive-pc.png) 0 0 / 100% 100%;
 }
 
-.content-row.row-2 .responsive-image {
-  background: url(/images//virtual-epoch-pc.png) 0 0 / 100% 100%;
-}
-
 .responsive-phone::before {
   background: url(/images/javascriptive-phone.png) 0 0 / 100% 100%;
 }
 
+.content-row.row-2 .responsive-image {
+  background: url(/images//virtual-epoch-pc.png) 0 0 / 100% 100%;
+}
+
 .content-row.row-2 .responsive-phone::before {
   background: url(/images//virtual-epoch-phone.png) 0 0 / 100% 100%;
+}
+
+.content-row.row-3 .responsive-image {
+  background: url(/images/gogetterz-pc.png) 0 0 / 100% 100%;
+}
+
+.content-row.row-3 .responsive-phone::before {
+  background: url(/images/gogetterz-phone.png\) 0 0 / 100% 100%;
 }
 
 .column-image {
