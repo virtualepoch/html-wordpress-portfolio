@@ -11,6 +11,7 @@
   --blue-chrome-3: #266c9d;
   --blue-chrome-4: #74d2d4;
   --blue-chrome-5: #e2dcd4;
+  --pink-test: #ff0077;
   --heading-drop-shadow: drop-shadow(-3px 1px 1px var(--blue-chrome-1));
   --text-drop-shadow: drop-shadow(-2px 1px 1px var(--blue-chrome-3));
 }
