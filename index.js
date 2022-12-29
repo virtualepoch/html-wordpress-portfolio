@@ -74,6 +74,19 @@ for (let i = 0; i < contactBtns.length; i++) {
   contactBtns[i].addEventListener("click", openCloseContactOverlay);
 }
 
+// OPEN-CLOSE RESUME PAGE ////////////////////////////////////////
+const resumePage = document.getElementById("resume-page");
+
+function openCloseResumePage() {
+  resumePage.classList.toggle("open");
+}
+
+const resumeDownloadPrompt = useRef(null);
+
+function openDownloadPrompt() {
+  resumeDownloadPrompt.classList.toggle("open");
+}
+
 ///////////////////////////////////////////////////////////////////
 // SWIPE EVENTS //////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////

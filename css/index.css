@@ -58,7 +58,7 @@ body {
   background: rgb(11, 22, 52, 0.9);
   position: fixed;
   top: -100%;
-  z-index: 88888;
+  z-index: 8888;
   overflow-y: auto;
   transition: all 500ms ease;
 }
