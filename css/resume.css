@@ -28,8 +28,8 @@
 }
 
 .resume-download-btn {
-  width: 55px;
-  height: 55px;
+  width: 50px;
+  height: 50px;
   border-radius: 10px;
   box-shadow: 0 3px 5px 1px rgb(0, 0, 0, 0.2);
   display: flex;
@@ -38,27 +38,17 @@
   cursor: pointer;
 }
 
-.download-icon{
-  width: 30px;
-  height: 30px;
+.download-icon {
+  width: 20px;
+  height: 20px;
   border-bottom: solid;
   display: flex;
   justify-content: center;
 }
-.download-icon-line{
-  width: 2px;
-  height: 70%;
-  background: black;
-  transform: rotate(-60deg);
-}
-
-.resume-download-btn p {
-  visibility: hidden;
-}
 
 .btn-close-resume {
-  width: 55px;
-  height: 55px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,7 +63,7 @@
 .btn-close-resume::before,
 .btn-close-resume::after {
   content: "";
-  width: 50%;
+  width: 45%;
   height: 2px;
   background: black;
   position: absolute;
@@ -91,19 +81,19 @@
   width: calc(100% - 30px);
   max-width: 800px;
   height: 300px;
-  margin: 0 auto;
   position: fixed;
-  top: 140px;
-  left: 0;
-  right: 0;
-  z-index: 88888888;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 88888;
   display: none;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   border-radius: 10px;
+  color: white;
   box-shadow: 0 0 7px 2px rgb(0, 0, 0, 0.5);
-  background: linear-gradient(to top right, black, rgb(124, 124, 124), black, rgb(158, 158, 158));
+  background: rgb(11, 22, 52, 0.9);
 }
 
 .resume-download-prompt.open {
@@ -113,8 +103,7 @@
 .btn-close-prompt {
   width: 40px;
   height: 40px;
-  background: red;
-  box-shadow: inset -2px 2px 7px 2px rgb(255, 255, 255, 0.6), -1px 2px 5px 1px rgb(0, 0, 0, 0.4);
+  box-shadow: 3px -3px 5px 1px rgb(255, 255, 255, 0.05), inset -3px 3px 5px 1px rgb(255, 255, 255, 0.08), inset 3px -3px 5px 1px rgb(0, 0, 0, 0.2), -3px 3px 5px 1px rgb(0, 0, 0, 0.12);
   margin: 12px;
   position: absolute;
   top: 0;
@@ -131,7 +120,7 @@
   content: "";
   width: 50%;
   height: 2px;
-  background: white;
+  background-color: rgb(255, 0, 0, 0.5);
   position: absolute;
 }
 
@@ -150,13 +139,14 @@
 .btn-download-pdf {
   width: fit-content;
   height: 40px;
-  background-color: blue;
-  padding: 0 8px;
+  background-color: rgb(0, 0, 255, 0.5);
+  color: white;
+  padding: 0 10px;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: inset -2px 2px 7px 2px rgb(255, 255, 255, 0.5), -1px 2px 5px 1px rgb(0, 0, 0, 0.4);
+  box-shadow: 3px -3px 5px 1px rgb(255, 255, 255, 0.05), inset -3px 3px 5px 1px rgb(255, 255, 255, 0.08), inset 3px -3px 5px 1px rgb(0, 0, 0, 0.2), -3px 3px 5px 1px rgb(0, 0, 0, 0.12);
 }
 
 .resume-png {

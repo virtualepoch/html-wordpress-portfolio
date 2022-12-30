@@ -81,9 +81,9 @@ function openCloseResumePage() {
   resumePage.classList.toggle("open");
 }
 
-const resumeDownloadPrompt = useRef(null);
+const resumeDownloadPrompt = document.querySelector(".resume-download-prompt");
 
-function openDownloadPrompt() {
+function openCloseDownloadPrompt() {
   resumeDownloadPrompt.classList.toggle("open");
 }
 

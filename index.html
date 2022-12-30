@@ -210,12 +210,14 @@
             <div class="contact-wrapper">
                 <div class="contact">
                     <div class="button-row">
-                        <div class="button-contact-link github"></div>
-                        <div class="button-contact-link linkedin"></div>
+                        <a href="https://github.com/virtualepoch" target="_blank"
+                            class="button-contact-link github"></a>
+                        <a href="https://www.linkedin.com/in/craig-kaufman/" target="_blank"
+                            class="button-contact-link linkedin"></a>
                     </div>
                     <div class="button-row">
-                        <div class="button-contact-link email"></div>
-                        <div class="button-contact-link resume"></div>
+                        <a href="mailto:cdk11235@gmail.com" target="_blank" class="button-contact-link email"></a>
+                        <div href="#resume" class="button-contact-link resume" onclick="openCloseResumePage()"></div>
                     </div>
                 </div>
             </div>
@@ -258,16 +260,14 @@
 
     <div id="resume-page">
         <div class="download-row">
-            <div class="resume-download-btn" onclick="openDownloadPrompt()">
-                <div class="download-icon">
-                    <div class="download-icon-line"></div>
-                </div>
+            <div class="resume-download-btn" onclick="openCloseDownloadPrompt()">
+                <div class="download-icon"></div>
             </div>
-            <div class="resume-download-prompt" ref={resumeDownloadPrompt}>
-                <div class="btn-close-prompt" onclick="openDownloadPrompt()"></div>
+            <div class="resume-download-prompt">
+                <div class="btn-close-prompt" onclick="openCloseDownloadPrompt()"></div>
                 <p>Click the button below to download Craig's resume in PDF format.</p>
                 <a class="btn-download-pdf" href="/images/craig-kaufman-resume-7-2022.pdf" download
-                    onclick="openDownloadPrompt()">
+                    onclick="openCloseDownloadPrompt()">
                     DOWNLOAD-PDF
                 </a>
             </div>

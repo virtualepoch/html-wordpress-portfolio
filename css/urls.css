@@ -43,11 +43,11 @@
 }
 
 .content-row.row-2 .responsive-image {
-  background: url(/images//virtual-epoch-pc.png) 0 0 / 100% 100%;
+  background: url(/images/virtual-epoch-pc.png) 0 0 / 100% 100%;
 }
 
 .content-row.row-2 .responsive-phone::before {
-  background: url(/images//virtual-epoch-phone.png) 0 0 / 100% 100%;
+  background: url(/images/virtual-epoch-phone.png) 0 0 / 100% 100%;
 }
 
 .content-row.row-3 .responsive-image {
@@ -60,4 +60,8 @@
 
 .column-image {
   background: url(/images/ck-logo.png) 0 0 / 100% 100%;
+}
+
+.download-icon {
+  background: url(../icons/angle-down-solid.svg) 50% 50%/90% no-repeat;
 }

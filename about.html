@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/main-content.css">
     <link rel="stylesheet" href="css/image-flip.css">
     <link rel="stylesheet" href="css/urls.css">
+    <link rel="stylesheet" href="css/resume.css">
     <title>CK-WP About</title>
 </head>
 
@@ -142,12 +143,14 @@
             <div class="contact-wrapper">
                 <div class="contact">
                     <div class="button-row">
-                        <div class="button-contact-link github"></div>
-                        <div class="button-contact-link linkedin"></div>
+                        <a href="https://github.com/virtualepoch" target="_blank"
+                            class="button-contact-link github"></a>
+                        <a href="https://www.linkedin.com/in/craig-kaufman/" target="_blank"
+                            class="button-contact-link linkedin"></a>
                     </div>
                     <div class="button-row">
-                        <div class="button-contact-link email"></div>
-                        <div class="button-contact-link resume"></div>
+                        <a href="mailto:cdk11235@gmail.com" target="_blank" class="button-contact-link email"></a>
+                        <div href="#resume" class="button-contact-link resume" onclick="openCloseResumePage()"></div>
                     </div>
                 </div>
             </div>
@@ -169,13 +172,14 @@
             <div class="contact-wrapper">
                 <div class="contact">
                     <div class="button-row">
-                        <div class="button-contact-link github"></div>
-                        <div class="button-contact-link linkedin"></div>
-
+                        <a href="https://github.com/virtualepoch" target="_blank"
+                            class="button-contact-link github"></a>
+                        <a href="https://www.linkedin.com/in/craig-kaufman/" target="_blank"
+                            class="button-contact-link linkedin"></a>
                     </div>
                     <div class="button-row">
-                        <div class="button-contact-link email"></div>
-                        <div class="button-contact-link resume"></div>
+                        <a href="mailto:cdk11235@gmail.com" target="_blank" class="button-contact-link email"></a>
+                        <div href="#resume" class="button-contact-link resume" onclick="openCloseResumePage()"></div>
                     </div>
                 </div>
             </div>
@@ -184,6 +188,24 @@
                 <div class="button-arrow-line"></div>
             </div>
         </div>
+    </div>
+
+    <div id="resume-page">
+        <div class="download-row">
+            <div class="resume-download-btn" onclick="openCloseDownloadPrompt()">
+                <div class="download-icon"></div>
+            </div>
+            <div class="resume-download-prompt">
+                <div class="btn-close-prompt" onclick="openCloseDownloadPrompt()"></div>
+                <p>Click the button below to download Craig's resume in PDF format.</p>
+                <a class="btn-download-pdf" href="/images/craig-kaufman-resume-7-2022.pdf" download
+                    onclick="openCloseDownloadPrompt()">
+                    DOWNLOAD-PDF
+                </a>
+            </div>
+            <div class="btn-close-resume" onclick="openCloseResumePage()"></div>
+        </div>
+        <img class="resume-png" src="/images/craig-kaufman-resume-7-2022.png" alt="resume" />
     </div>
 
     <script src="index.js"></script>
