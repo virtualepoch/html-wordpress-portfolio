@@ -84,6 +84,13 @@ body {
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
 }
+@media (max-width: 700px) {
+  .contact-overlay.footer {
+    background: rgb(11, 22, 52);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
 
 .button-close-contact-overlay-container {
   padding: 20px;
