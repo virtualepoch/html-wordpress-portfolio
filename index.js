@@ -94,7 +94,7 @@ function openCloseDownloadPrompt() {
 window.addEventListener(
   "load",
   function () {
-    var touchsurface = document.querySelector(".contact-overlay-container"),
+    var touchSurface = document.querySelector(".contact-overlay-container"),
       startX,
       startY,
       dist,
@@ -103,24 +103,24 @@ window.addEventListener(
       elapsedTime,
       startTime;
 
-    function handleswipe(isUpSwipe) {
-      if (isUpSwipe) touchsurface.classList.remove("open");
+    function handleSwipe(isUpSwipe) {
+      if (isUpSwipe) touchSurface.classList.remove("open");
     }
 
-    touchsurface.addEventListener(
+    touchSurface.addEventListener(
       "touchstart",
       function (e) {
-        var touchobj = e.changedTouches[0];
+        var touchObject = e.changedTouches[0];
         dist = 0;
-        startX = touchobj.pageX;
-        startY = touchobj.pageY;
+        startX = touchObject.pageX;
+        startY = touchObject.pageY;
         startTime = new Date().getTime(); // record time when finger first makes contact with surface
         // e.preventDefault();
       },
       false
     );
 
-    touchsurface.addEventListener(
+    touchSurface.addEventListener(
       "touchmove",
       function (e) {
         e.preventDefault(); // prevent scrolling when inside DIV
@@ -128,15 +128,15 @@ window.addEventListener(
       false
     );
 
-    touchsurface.addEventListener(
+    touchSurface.addEventListener(
       "touchend",
       function (e) {
-        var touchobj = e.changedTouches[0];
-        dist = startY - touchobj.pageY; // get total dist traveled by finger while in contact with surface
+        var touchObject = e.changedTouches[0];
+        dist = startY - touchObject.pageY; // get total dist traveled by finger while in contact with surface
         elapsedTime = new Date().getTime() - startTime; // get time elapsed
         // check that elapsed time is within specified, horizontal dist traveled >= threshold, and vertical dist traveled <= 100
-        var swipeUpBol = elapsedTime <= allowedTime && dist >= threshold && Math.abs(touchobj.pageX - startX) <= 100;
-        handleswipe(swipeUpBol);
+        var swipeUpBol = elapsedTime <= allowedTime && dist >= threshold && Math.abs(touchObject.pageX - startX) <= 100;
+        handleSwipe(swipeUpBol);
         // e.preventDefault();
       },
       false
