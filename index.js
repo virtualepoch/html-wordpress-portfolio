@@ -135,7 +135,7 @@ window.addEventListener(
         dist = startY - touchObject.pageY; // get total dist traveled by finger while in contact with surface
         elapsedTime = new Date().getTime() - startTime; // get time elapsed
         // check that elapsed time is within specified, horizontal dist traveled >= threshold, and vertical dist traveled <= 100
-        var swipeUpBol = elapsedTime <= allowedTime && dist >= threshold && Math.abs(touchObject.pageX - startX) <= 100;
+        var swipeUpBol = elapsedTime <= allowedTime && dist >= threshold && Math.abs(touchObject.pageX - startX && startX - touchObject.pageX) <= 50;
         handleSwipe(swipeUpBol);
         // e.preventDefault();
       },
